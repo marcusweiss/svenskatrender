@@ -1,0 +1,48 @@
+# Exclude the other project
+question-library/
+
+# Exclude large/sensitive source files
+*.xlsm
+*.pdf
+*.docx
+*.zip
+*.ado
+*.txt
+
+# Exclude extracted/temp files
+xlsm_extract/
+tusental/
+
+# Node modules (already in subdirectories, but good to have at root)
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+*.local
+
+# Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Only include what we need:
+# ✅ .github/workflows/deploy.yml
+# ✅ web-report/
+# ✅ scripts/export_report_data.py
+# ✅ data/report-data.json
+
