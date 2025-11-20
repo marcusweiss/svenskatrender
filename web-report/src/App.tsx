@@ -547,8 +547,7 @@ function App() {
                                       // This keeps labels close to their data points
                                       const verticalOffset = (index - (chart.series.length - 1) / 2) * 3
                                       
-                                      // Format value - no % for partiledarpopularitet, round for partisympati
-                                      const isPartisympati = activeIndicator.title.toLowerCase().includes('partisympati')
+                                      // Format value - no % for partiledarpopularitet
                                       const displayValue = Math.round(Number(value))
                                       const percentageText = isPartiledare ? `${displayValue}` : `${displayValue}%`
                                       // Add series name (label) to the value
