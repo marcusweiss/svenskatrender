@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-19T13:35:02+00:00",
+  "generated_at": "2025-11-20T12:35:53+00:00",
   "source_workbook": "3. Svenska trender 1986-2024.xlsm",
   "section_count": 5,
   "sections": [
@@ -156,7 +156,8 @@
           "rubrik": "BEDÖMNING AV SVERIGES EKONOMI",
           "underrubrik": "Sveriges ekonomi jämfört med hur den var för tolv månader sedan",
           "fraga": "“Hur har enligt din mening nedanstående ekonomiska förhållanden förändrats under de senaste 12 månaderna? Den svenska ekonomin”",
-          "kommentar": "Svarsalternativen är \"klart förbättrats\"; \"förbättrats något\"; \"förblivit ungefär densamma\"; \"försämrats något\"; \" klart försämrats\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"klart förbättrats\"; \"förbättrats något\"; \"förblivit ungefär densamma\"; \"försämrats något\"; \" klart försämrats\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Bedömning av den egna ekonomin",
@@ -307,7 +308,8 @@
           "rubrik": "BEDÖMNING AV DEN EGNA EKONOMIN",
           "underrubrik": "Den egna ekonomin jämfört med för tolv månader sedan",
           "fraga": "“Hur har enligt din mening nedanstående ekonomiska förhållanden förändrats under de senaste 12 månaderna? Din egen ekonomiska situation”",
-          "kommentar": "Svarsalternativen är \"klart förbättrats\"; \"förbättrats något\"; \"förblivit ungefär densamma\"; \"försämrats något\"; \" klart försämrats\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"klart förbättrats\"; \"förbättrats något\"; \"förblivit ungefär densamma\"; \"försämrats något\"; \" klart försämrats\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Bedömning av utvecklingen i Sverige",
@@ -380,7 +382,8 @@
           "rubrik": "BEDÖMNING AV UTVECKLINGEN  I SVERIGE",
           "underrubrik": null,
           "fraga": "“Allmänt sett, tycker du att utvecklingen i Sverige går åt rätt håll eller åt fel håll?”",
-          "kommentar": "Svarsalternativen är \"åt rätt håll\", \"åt fel håll\" samt \"ingen uppfattning\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"åt rätt håll\", \"åt fel håll\" samt \"ingen uppfattning\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 2012–2024"
         },
         {
           "title": "Mellanmänsklig tillit",
@@ -535,7 +538,8 @@
           "rubrik": "MELLANMÄNSKLIG TILLIT",
           "underrubrik": null,
           "fraga": "“Enligt din uppfattning, i vilken utsträckning går det att lita på människor i allmänhet? Svara med hjälp av nedanstående skala.”",
-          "kommentar": "Skalan går mellan 0 och 10 där 0 innebär att ”det går inte att lita på människor i allmänhet”, och 10 att ”det går att lita på människor i allmänhet”. Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Skalan går mellan 0 och 10 där 0 innebär att ”det går inte att lita på människor i allmänhet”, och 10 att ”det går att lita på människor i allmänhet”. Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1996–2024"
         },
         {
           "title": "Nöjd med livet",
@@ -690,7 +694,8 @@
           "rubrik": "NÖJD MED LIVET",
           "underrubrik": null,
           "fraga": "\"Hur nöjd är du på det hela taget med det liv du lever?\"",
-          "kommentar": "Svarsalternativen är \"mycket nöjd\"; \"ganska nöjd\"; \"inte särskilt nöjd\" samt \"inte alls nöjd\". \"Inte nöjd\" består av de som svarat \"Inte särskilt\" respektive \"inte alls nöjd\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"mycket nöjd\"; \"ganska nöjd\"; \"inte särskilt nöjd\" samt \"inte alls nöjd\". \"Inte nöjd\" består av de som svarat \"Inte särskilt\" respektive \"inte alls nöjd\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1996–2024"
         },
         {
           "title": "Förtroende",
@@ -929,7 +934,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "Polisen, domstolarna och försvaret",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Förtroende",
@@ -1056,7 +1062,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "Kungahuset och svenska kyrkan",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1994–2024"
         },
         {
           "title": "Förtroende",
@@ -1295,7 +1302,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "Bankerna, storföretagen, de fackliga organisationerna och riksbanken",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Förtroende",
@@ -1534,7 +1542,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "Riksdagen, regeringen, kommunstyrelserna och de politiska partierna",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Förtroende",
@@ -1681,7 +1690,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "EU-parlamentet, EU-kommissionen och FN",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1998–2024"
         },
         {
           "title": "Förtroende",
@@ -1832,7 +1842,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "Radio/TV och dagspress",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Förtroende",
@@ -2027,7 +2038,8 @@
           "rubrik": "FÖRTROENDE FÖR SAMHÄLLSINSTITUTIONER",
           "underrubrik": "Sjukvården, universitet/högskolor och grundskolan",
           "fraga": "“Hur stort förtroende har du för det sätt på vilket följande institutioner och grupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \" varken stort eller litet förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Förtroende för yrkesgrupper",
@@ -2326,7 +2338,8 @@
           "rubrik": "FÖRTROENDE FÖR YRKESGRUPPER",
           "underrubrik": null,
           "fraga": "“Allmänt sett, hur stort förtroende har du för det sätt på vilket följande yrkesgrupper sköter sitt arbete?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \"varken stort eller litet förtroende\"; \"ganska litet förtroende\"; \"mycket litet förtroende\" samt \"ingen uppfattning”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \"varken stort eller litet förtroende\"; \"ganska litet förtroende\"; \"mycket litet förtroende\" samt \"ingen uppfattning”. Resultaten avser andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 2002–2024"
         },
         {
           "title": "Vad Svenskar oroar sig för",
@@ -2462,7 +2475,8 @@
           "rubrik": "VAD SVENSKAR OROAR SIG FÖR",
           "underrubrik": "Ekonomisk kris och Stor arbetslöshet",
           "fraga": "“Om du ser till läget idag, hur oroande upplever du själv följande inför framtiden?”",
-          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1991–2024"
         },
         {
           "title": "Vad Svenskar oroar sig för",
@@ -2745,7 +2759,8 @@
           "rubrik": "VAD SVENSKAR OROAR SIG FÖR",
           "underrubrik": "Miljöfrågor",
           "fraga": "“Om du ser till läget idag, hur oroande upplever du själv följande inför framtiden?”",
-          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Vad Svenskar oroar sig för",
@@ -3088,7 +3103,8 @@
           "rubrik": "VAD SVENSKAR OROAR SIG FÖR",
           "underrubrik": "Säkerhet och demokrati",
           "fraga": "“Om du ser till läget idag, hur oroande upplever du själv följande inför framtiden?”",
-          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Vad Svenskar oroar sig för",
@@ -3292,7 +3308,8 @@
           "rubrik": "VAD SVENSKAR OROAR SIG FÖR",
           "underrubrik": "Välfärd och migrationsfrågor",
           "fraga": "“Om du ser till läget idag, hur oroande upplever du själv följande inför framtiden?”",
-          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1993–2024"
         },
         {
           "title": "Vad Svenskar oroar sig för",
@@ -3732,7 +3749,8 @@
           "rubrik": "VAD SVENSKAR OROAR SIG FÖR",
           "underrubrik": "Samtliga områden",
           "fraga": "“Om du ser till läget idag, hur oroande upplever du själv följande inför framtiden?”",
-          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga. Tabellen visar enbart de 20 senaste åren, för mer information se tillhörande tabellrapport."
+          "kommentar": "Svarsalternativen är “mycket oroande\"; \"ganska oroande\"; \"inte särskilt oroande\" samt \"inte alls oroande\". Resultaten redovisar de som svarat “mycket oroande\". Procentbasen utgörs av dem som besvarat respektive fråga. Tabellen visar enbart de 20 senaste åren, för mer information se tillhörande tabellrapport.",
+          "kalla": "Den nationella SOM-undersökningen 2001–2024"
         },
         {
           "title": "Fritidsaktiviteter",
@@ -3919,7 +3937,8 @@
           "rubrik": "FRITIDSAKTIVITETER",
           "underrubrik": "Bio, teater och restaurang",
           "fraga": "”Hur ofta har du under de senaste 12 månaderna gjort följande?\"",
-          "kommentar": "Svarsalternativen är “ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten redovisar aktivitet minst en gång i halvåret för bio- och teaterbesök samt minst en gång i månaden för restaurangbesök. Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten redovisar aktivitet minst en gång i halvåret för bio- och teaterbesök samt minst en gång i månaden för restaurangbesök. Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1988–2024"
         },
         {
           "title": "Fritidsaktiviteter",
@@ -4066,7 +4085,8 @@
           "rubrik": "FRITIDSAKTIVITETER",
           "underrubrik": "Sport/idrott, friluftsliv, motion",
           "fraga": "”Hur ofta har du under de senaste 12 månaderna gjort följande?\"",
-          "kommentar": "Svarsalternativen är \"ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten redovisar aktivitet minst en gång i veckan.  I 2012 års undersökning ändrades frågan \"Sysslat med sport/idrott\" till \"Motionerat/tränat\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är \"ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten redovisar aktivitet minst en gång i veckan.  I 2012 års undersökning ändrades frågan \"Sysslat med sport/idrott\" till \"Motionerat/tränat\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1998–2024"
         },
         {
           "title": "Fritidsaktiviteter",
@@ -4211,7 +4231,8 @@
           "rubrik": "FRITIDSAKTIVITETER",
           "underrubrik": "Bett till Gud, besökt gudstjänst",
           "fraga": "”Hur ofta har du under de senaste 12 månaderna gjort följande?\"",
-          "kommentar": "Svarsalternativen är “ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten för besökt gudstjänst eller religiöst möte redovisar aktivitet minst en gång i månaden. Resultaten för bett till Gud redovisar aktivitet minst en gång i veckan. Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten för besökt gudstjänst eller religiöst möte redovisar aktivitet minst en gång i månaden. Resultaten för bett till Gud redovisar aktivitet minst en gång i veckan. Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1988–2024"
         },
         {
           "title": "Alkoholvanor",
@@ -4344,7 +4365,8 @@
           "rubrik": "ALKOHOLVANOR",
           "underrubrik": null,
           "fraga": "”Hur ofta har du under de senaste 12 månaderna gjort följande? Druckit vin/sprit/starköl?\"",
-          "kommentar": "Svarsalternativen är “ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten avser konsumtion minst en gång i veckan samt ingen gång. Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är “ingen gång\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i kvartalet\"; \"någon gång i månaden\"; \"någon gång i veckan\" samt \"flera gånger i veckan”. Resultaten avser konsumtion minst en gång i veckan samt ingen gång. Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1992–2024"
         },
         {
           "title": "Regelbunden bokläsning och spelande",
@@ -4489,7 +4511,8 @@
           "rubrik": "REGELBUNDEN BOKLÄSNING OCH SPELANDE",
           "underrubrik": null,
           "fraga": "\"Hur ofta har du under de senaste 12 månaderna gjort följande?\" - \"Läst någon bok\", \"Spelat dator-/mobil-/tv-spel\"",
-          "kommentar": "Svarsalternativen är \"Aldrig\"; \"Ingen gång\"; \"Någon gång under de senaste 12 månaderna\"; \"Någon gång i halvåret\"; \"Någon gång i månaden\"; \"Någon gång i veckan\" samt \"Flera gånger i veckan\". Resultaten redovisar andelen som läst bok och spelat minst en gång i veckan. Frågan om spelande löd fram till 2019 \"Spelat datorspel/tv-spel\", \"mobilspel\" lades sedan till. Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är \"Aldrig\"; \"Ingen gång\"; \"Någon gång under de senaste 12 månaderna\"; \"Någon gång i halvåret\"; \"Någon gång i månaden\"; \"Någon gång i veckan\" samt \"Flera gånger i veckan\". Resultaten redovisar andelen som läst bok och spelat minst en gång i veckan. Frågan om spelande löd fram till 2019 \"Spelat datorspel/tv-spel\", \"mobilspel\" lades sedan till. Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1988–2024"
         },
         {
           "title": "Föreningsmedlemskap",
@@ -4772,7 +4795,8 @@
           "rubrik": "FÖRENINGSMEDLEMSKAP",
           "underrubrik": null,
           "fraga": "”Är du medlem i någon typ av förening/organisation?”",
-          "kommentar": "Resultaten redovisar andelen som är medlemmar i olika typer av föreningar. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Resultaten redovisar andelen som är medlemmar i olika typer av föreningar. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         }
       ]
     },
@@ -5149,7 +5173,8 @@
           "rubrik": "REGELBUNDEN NYHETSANVÄNDNING",
           "underrubrik": null,
           "fraga": "”Hur ofta brukar du ta del av följande nyhetsprogram eller nyhetstjänster?\"; \"Läser eller tittar du regelbundet i någon morgontidning på papper?\"; \"Hur ofta brukar du ta del av nyheter från följande?\"; \"Hur ofta brukar du ta del av nyheter från följande på internet?\"; \"Prenumererar du eller någon i ditt hushåll på någon morgontidning? Frågan gäller både papperstidningar och digitala prenumerationer\"",
-          "kommentar": "Resultaten redovisar andelen som gör saken minst tre dagar i veckan. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Resultaten redovisar andelen som gör saken minst tre dagar i veckan. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Morgontidning: regelbunden läsning och prenumeration",
@@ -5328,7 +5353,8 @@
           "rubrik": "MORGONTIDNING: REGELBUNDEN LÄSNING OCH PRENUMERATION",
           "underrubrik": null,
           "fraga": "\"Läser eller tittar du regelbundet i någon morgontidning på papper?; \"Prenumererar du eller någon i ditt hushåll på någon morgontidning? Frågan gäller både papperstidningar och digitala prenumerationer\"",
-          "kommentar": "Resultaten redovisar andel  som angett att de har en morgontidningsprenumeration respektive läser en morgontidning på papper eller internet åtminstone tre dagar i veckan. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Resultaten redovisar andel  som angett att de har en morgontidningsprenumeration respektive läser en morgontidning på papper eller internet åtminstone tre dagar i veckan. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1990–2024"
         },
         {
           "title": "Regelbundet lyssnande på public service-radio respektive kommersiell radio",
@@ -5455,7 +5481,8 @@
           "rubrik": "REGELBUNDET LYSSNANDE PÅ PUBLIC SERVICE-RADIO RESPEKTIVE KOMMERSIELL RADIO",
           "underrubrik": null,
           "fraga": "“Hur ofta brukar du lyssna på följande radiokanaler?”",
-          "kommentar": "Svarsalternativen är \"Dagligen; \"5–6 dagar/vecka\"; \"3–4 dagar/vecka\"; \"1–2 dagar/vecka\"; \"Mer sällan\" samt \"Aldrig\". Resultaten redovisar andelen som lyssnar minst fem dagar/vecka på någon av Sveriges Radios kanaler respektive någon privat lokalradiokanal. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Svarsalternativen är \"Dagligen; \"5–6 dagar/vecka\"; \"3–4 dagar/vecka\"; \"1–2 dagar/vecka\"; \"Mer sällan\" samt \"Aldrig\". Resultaten redovisar andelen som lyssnar minst fem dagar/vecka på någon av Sveriges Radios kanaler respektive någon privat lokalradiokanal. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1994–2024"
         },
         {
           "title": "Regelbundet lyssnande på Sveriges radios kanaler",
@@ -5654,7 +5681,8 @@
           "rubrik": "REGELBUNDET LYSSNANDE PÅ SVERIGES RADIOS KANALER",
           "underrubrik": null,
           "fraga": "\"Hur ofta brukar du lyssna på följande radiokanaler?”",
-          "kommentar": "Svarsalternativen är \"Dagligen; \"5–6 dagar/vecka\"; \"3–4 dagar/vecka\"; \"1–2 dagar/vecka\"; \"Mer sällan\" samt \"Aldrig\". Resultaten redovisar andelen som lyssnar på respektive radiokanal minst fem dagar/vecka. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Svarsalternativen är \"Dagligen; \"5–6 dagar/vecka\"; \"3–4 dagar/vecka\"; \"1–2 dagar/vecka\"; \"Mer sällan\" samt \"Aldrig\". Resultaten redovisar andelen som lyssnar på respektive radiokanal minst fem dagar/vecka. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1994–2024"
         },
         {
           "title": "Tekniktillgång i hushållet",
@@ -6063,7 +6091,8 @@
           "rubrik": "TEKNIKTILLGÅNG I HUSHÅLLET",
           "underrubrik": null,
           "fraga": "\"Har du för närvarande tillgång till något av följande i ditt hushåll?\"",
-          "kommentar": "Svarsalternativen är \"Ja\" samt \"Nej\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är \"Ja\" samt \"Nej\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1987–2020"
         },
         {
           "title": "Internetanvändning",
@@ -6187,7 +6216,8 @@
           "rubrik": "INTERNETANVÄNDNING",
           "underrubrik": null,
           "fraga": "”Hur ofta har du under de senaste 12 månaderna använt internet?”",
-          "kommentar": "Svarsalternativen är “aldrig\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i månaden\"; \"någon gång i veckan\"; \"flera gånger i veckan\" samt \"dagligen\". Resultaten redovisar andel som använt internet minst \"flera gånger i veckan\" samt \"Aldrig\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “aldrig\"; \"någon gång under de senaste 12 månaderna\"; \"någon gång i halvåret\"; \"någon gång i månaden\"; \"någon gång i veckan\"; \"flera gånger i veckan\" samt \"dagligen\". Resultaten redovisar andel som använt internet minst \"flera gånger i veckan\" samt \"Aldrig\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1995–2024"
         },
         {
           "title": "Användningsområden på internet",
@@ -6481,7 +6511,8 @@
           "rubrik": "ANVÄNDNINGSOMRÅDEN PÅ INTERNET",
           "underrubrik": null,
           "fraga": "”Hur ofta har du gjort följande på internet?”",
-          "kommentar": "Svarsalternativen är “Aldrig; \"Någon gång under de senaste 12 månaderna\"; \"Någon gång i halvåret\"; \"Någon gång i månaden\"; \"Någon gång i veckan\" samt \"Flera gånger i veckan\". Resultaten redovisar andel som gjort respektive aktivitet minst någon gång i veckan. Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “Aldrig; \"Någon gång under de senaste 12 månaderna\"; \"Någon gång i halvåret\"; \"Någon gång i månaden\"; \"Någon gång i veckan\" samt \"Flera gånger i veckan\". Resultaten redovisar andel som gjort respektive aktivitet minst någon gång i veckan. Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 2005–2024"
         }
       ]
     },
@@ -6726,7 +6757,8 @@
           "rubrik": "POLITISKT INTRESSE, DISKUTERAT POLITIK OCH PARTIMEDLEMSKAP",
           "underrubrik": null,
           "fraga": "”Hur intresserad är du i allmänhet av politik?”, \"Är du medlem i något politiskt parti/förbund?\", \"Hur ofta har du de senaste 12 månaderna diskuterat politik?\", \"Hur ofta har du under de senaste 12 månaderna deltagit i demonstration?\"",
-          "kommentar": "Resultaten avser dem som angett mycket och ganska intresserade av politik, diskuterat politik någon eller flera gånger i vecka, andel partimedlemmar samt deltagit i demonstration under de senaste 12 månaderna. Svarsalternativ för politiskt intresse: “mycket intresserad\"; \"ganska intresserad\"; \"inte särskilt intresserad\" samt \"inte alls intresserad”. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Resultaten avser dem som angett mycket och ganska intresserade av politik, diskuterat politik någon eller flera gånger i vecka, andel partimedlemmar samt deltagit i demonstration under de senaste 12 månaderna. Svarsalternativ för politiskt intresse: “mycket intresserad\"; \"ganska intresserad\"; \"inte särskilt intresserad\" samt \"inte alls intresserad”. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Ideologisk vänster-höger-placering",
@@ -6921,7 +6953,8 @@
           "rubrik": "IDEOLOGISK VÄNSTER-HÖGER-PLACERING",
           "underrubrik": null,
           "fraga": "”Man talar ibland om att politiska åsikter kan placeras in på en vänster-högerskala. Var någonstans skulle du placera dig själv på en sådan skala?”",
-          "kommentar": "Svarsalternativen är ”klart till vänster\"; \"något till vänster\"; \"varken till vänster eller till höger\"; \"något till höger\" samt \"klart till höger”. Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är ”klart till vänster\"; \"något till vänster\"; \"varken till vänster eller till höger\"; \"något till höger\" samt \"klart till höger”. Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Bedömning av regeringens arbete",
@@ -7072,7 +7105,8 @@
           "rubrik": "BEDÖMNING AV REGERINGENS ARBETE",
           "underrubrik": null,
           "fraga": "“Hur tycker du att regeringen sköter sin uppgift?\"",
-          "kommentar": "Svarsalternativen är ”mycket bra\"; \"ganska bra\"; \"varken bra eller dåligt\"; \"ganska dåligt\" samt mycket dåligt”. Resultaten  redovisar andel svarande som angett \"mycket\" eller \"ganska bra\" respektive \"mycket\" eller \"ganska dåligt\". Åren 1991, 1994, 2006 och 2014 var det regeringsskifte mitt i undersökningsperioden. Dessa mätningar bör tolkas med viss försiktighet. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Svarsalternativen är ”mycket bra\"; \"ganska bra\"; \"varken bra eller dåligt\"; \"ganska dåligt\" samt mycket dåligt”. Resultaten  redovisar andel svarande som angett \"mycket\" eller \"ganska bra\" respektive \"mycket\" eller \"ganska dåligt\". Åren 1991, 1994, 2006 och 2014 var det regeringsskifte mitt i undersökningsperioden. Dessa mätningar bör tolkas med viss försiktighet. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Nöjd med hur demokratin fungerar",
@@ -7246,7 +7280,8 @@
           "rubrik": "NÖJD MED HUR DEMOKRATIN FUNGERAR",
           "underrubrik": null,
           "fraga": "“Allmänt sett, hur nöjd är du med det sätt på vilket demokratin fungerar i:\"",
-          "kommentar": "Svarsalternativen är \"mycket nöjd\"; \"ganska nöjd\"; \"inte särskilt nöjd\" samt \"inte alls nöjd\". Resultaten visar andel som svarar \"mycket\" eller \"ganska nöjd\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"mycket nöjd\"; \"ganska nöjd\"; \"inte särskilt nöjd\" samt \"inte alls nöjd\". Resultaten visar andel som svarar \"mycket\" eller \"ganska nöjd\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1999–2024"
         },
         {
           "title": "Förtroende för Svenska politiker",
@@ -7361,7 +7396,8 @@
           "rubrik": "FÖRTROENDE FÖR SVENSKA POLITIKER",
           "underrubrik": null,
           "fraga": "“Allmänt sett, hur stort förtroende har du för svenska politiker?”",
-          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten visar andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som har besvarat frågan."
+          "kommentar": "Svarsalternativen är “mycket stort förtroende\"; \"ganska stort förtroende\"; \"ganska litet förtroende\" samt \"mycket litet förtroende”. Resultaten visar andel som svarat \"mycket\" eller \"ganska stort förtroende\". Procentbasen utgörs av dem som har besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1998–2024"
         },
         {
           "title": "Partisympati",
@@ -7386,564 +7422,20 @@
               "Inget parti"
             ],
             [
-              "1986",
-              "3.17",
-              "45.38",
-              "5.39",
-              "7.89",
-              "17.94",
-              "1.01",
-              "18",
-              "-",
-              "-",
-              "-",
-              "1.21",
-              "100",
-              "8.68"
-            ],
-            [
-              "1987",
-              "2.78",
-              "43.2",
-              "8.26",
-              "6.09",
-              "20.38",
-              "1.9",
-              "16.72",
-              "-",
-              "-",
-              "-",
-              "0.68",
-              "100",
-              "11.61"
-            ],
-            [
-              "1989",
-              "7.35",
-              "34.51",
-              "7.35",
-              "8.07",
-              "15.49",
-              "3.03",
-              "21.76",
-              "-",
-              "-",
-              "-",
-              "2.45",
-              "100",
-              "12.04"
-            ],
-            [
-              "1990",
-              "7.21",
-              "29.12",
-              "5.2",
-              "8.77",
-              "13.08",
-              "5.27",
-              "27.93",
-              "-",
-              "-",
-              "-",
-              "3.42",
-              "100",
-              "14.92"
-            ],
-            [
-              "1992",
-              "3.84",
-              "42.51",
-              "3.1",
-              "5.85",
-              "7.34",
-              "2.64",
-              "21.76",
-              "10.56",
-              "-",
-              "-",
-              "2.41",
-              "100",
-              "7.73"
-            ],
-            [
-              "1993",
-              "2.98",
-              "45.04",
-              "3.09",
-              "5.37",
-              "8.69",
-              "3.56",
-              "21.59",
-              "6.42",
-              "-",
-              "-",
-              "3.27",
-              "100",
-              "7.7"
-            ],
-            [
-              "1994",
-              "6.93",
-              "43.04",
-              "5.38",
-              "7.3",
-              "8.16",
-              "3.4",
-              "21.83",
-              "1.36",
-              "-",
-              "-",
-              "2.6",
-              "100",
-              "5.11"
-            ],
-            [
-              "1995",
-              "13.39",
-              "30.72",
-              "12.4",
-              "5.98",
-              "5.12",
-              "3.21",
-              "26.59",
-              "-",
-              "-",
-              "-",
-              "2.59",
-              "100",
-              "8.78"
-            ],
-            [
-              "1996",
-              "13.07",
-              "31.22",
-              "8.69",
-              "6.41",
-              "6.47",
-              "3.87",
-              "27.03",
-              "-",
-              "-",
-              "-",
-              "3.24",
-              "100",
-              "11.41"
-            ],
-            [
-              "1997",
-              "9.6",
-              "33.42",
-              "8.42",
-              "4.83",
-              "6.2",
-              "4.05",
-              "29.5",
-              "-",
-              "-",
-              "-",
-              "3.98",
-              "100",
-              "12.66"
-            ],
-            [
-              "1998",
-              "12.69",
-              "35.76",
-              "5.83",
-              "4.51",
-              "5.08",
-              "11.58",
-              "22.11",
-              "-",
-              "-",
-              "-",
-              "2.44",
-              "100",
-              "6.63"
-            ],
-            [
-              "1999",
-              "14.62",
-              "31.23",
-              "6.11",
-              "3.82",
-              "5.08",
-              "12.56",
-              "24.52",
-              "-",
-              "-",
-              "-",
-              "2.06",
-              "100",
-              "11.16"
-            ],
-            [
-              "2000",
-              "15.66",
-              "32.04",
-              "4.93",
-              "3.98",
-              "4.89",
-              "12.8",
-              "23.34",
-              "-",
-              "-",
-              "-",
-              "2.35",
-              "100",
-              "10.12"
-            ],
-            [
-              "2001",
-              "12.17",
-              "38.71",
-              "3.74",
-              "6.33",
-              "4.23",
-              "10.84",
-              "21.47",
-              "-",
-              "-",
-              "-",
-              "2.5",
-              "100",
-              "11.02"
-            ],
-            [
-              "2002",
-              "8.64",
-              "41.48",
-              "4.25",
-              "6.55",
-              "16.6",
-              "7.81",
-              "11.57",
-              "-",
-              "-",
-              "-",
-              "3.11",
-              "100",
-              "7.34"
-            ],
-            [
-              "2003",
-              "9.59",
-              "37.56",
-              "5.68",
-              "7.61",
-              "12.3",
-              "7.52",
-              "16.78",
-              "-",
-              "-",
-              "-",
-              "2.95",
-              "100",
-              "9.52"
-            ],
-            [
-              "2004",
-              "8.86",
-              "35.36",
-              "5.59",
-              "6.9",
-              "10.53",
-              "5.07",
-              "23.09",
-              "-",
-              "-",
-              "-",
-              "4.6",
-              "100",
-              "10.91"
-            ],
-            [
-              "2005",
-              "5.85",
-              "36.11",
-              "6.29",
-              "6.58",
-              "9.41",
-              "4.48",
-              "26.92",
-              "-",
-              "-",
-              "-",
-              "4.35",
-              "100",
-              "10.19"
-            ],
-            [
-              "2006",
-              "5.93",
-              "32.76",
-              "7.82",
-              "7.72",
-              "7.16",
-              "6.81",
-              "27.09",
-              "-",
-              "2.18",
-              "-",
-              "2.54",
-              "100",
-              "7.94"
-            ],
-            [
-              "2007",
-              "5.7",
-              "38.9",
-              "8.44",
-              "5.99",
-              "9.04",
-              "4.78",
-              "22.25",
-              "-",
-              "2.45",
-              "-",
-              "2.45",
-              "100",
-              "8.56"
-            ],
-            [
-              "2008",
-              "6.15",
-              "39.17",
-              "7.8",
-              "5.49",
-              "6.91",
-              "4.07",
-              "23.93",
-              "-",
-              "4.46",
-              "-",
-              "2.02",
-              "100",
-              "7.18"
-            ],
-            [
-              "2009",
-              "5.33",
-              "28.92",
-              "10.62",
-              "4.44",
-              "7.7",
-              "3.66",
-              "28.67",
-              "-",
-              "3.82",
-              "-",
-              "6.85",
-              "100",
-              "9.01"
-            ],
-            [
-              "2010",
-              "4.39",
-              "26.75",
-              "11.12",
-              "4.95",
-              "7.88",
-              "4.11",
-              "33.33",
-              "-",
-              "4.2",
-              "0.73",
-              "2.55",
-              "100",
-              "6.75"
-            ],
-            [
-              "2011",
-              "5.43",
-              "28.36",
-              "11.77",
-              "4.48",
-              "6.73",
-              "2.94",
-              "33.63",
-              "-",
-              "5.18",
-              "0.3",
-              "1.18",
-              "100",
-              "8.35"
-            ],
-            [
-              "2012",
-              "5.26",
-              "33.03",
-              "9.82",
-              "3.76",
-              "6.01",
-              "2.98",
-              "30.19",
-              "-",
-              "7.19",
-              "0.42",
-              "1.34",
-              "100",
-              "8.68"
-            ],
-            [
-              "2013",
-              "6.44",
-              "30.62",
-              "11.12",
-              "3.22",
-              "6.07",
-              "3.86",
-              "27.14",
-              "-",
-              "8.55",
-              "0.25",
-              "2.75",
-              "100",
-              "7.36"
-            ],
-            [
-              "2014",
-              "6.32",
-              "30.52",
-              "8.88",
-              "6.86",
-              "6.97",
-              "4.33",
-              "22.56",
-              "-",
-              "9.55",
-              "2.48",
-              "1.52",
-              "100",
-              "8"
-            ],
-            [
-              "2015",
-              "7.44",
-              "26.36",
-              "7.15",
-              "8.39",
-              "5.86",
-              "3.73",
-              "22.34",
-              "-",
-              "14.84",
-              "2.27",
-              "1.62",
-              "100",
-              "10.77"
-            ],
-            [
-              "2016",
-              "6.4",
-              "28.6",
-              "4.6",
-              "8.2",
-              "5.8",
-              "2.5",
-              "24.1",
-              "-",
-              "14.1",
-              "2.3",
-              "3.5",
-              "100",
-              "12.9"
-            ],
-            [
-              "2017",
-              "6.5",
-              "32.5",
-              "3.9",
-              "13",
-              "6.1",
-              "2.8",
-              "16.3",
-              "-",
-              "13.8",
-              "1.6",
-              "3.4",
-              "100",
-              "8.9"
-            ],
-            [
-              "2018",
+              "2024",
               "8",
-              "29",
-              "5",
-              "10",
-              "6",
+              "33",
               "7",
-              "18",
-              "-",
-              "13",
-              "1",
+              "6",
+              "4",
+              "3",
+              "22",
+              null,
+              "14",
+              null,
               "3",
               "100",
-              "8"
-            ],
-            [
-              "2019",
-              "9",
-              "26",
-              "6",
-              "10",
-              "5",
-              "7",
-              "17",
-              "-",
-              "17",
-              "-",
-              "3",
-              "100",
-              "9"
-            ],
-            [
-              "2020",
-              "10",
-              "28",
-              "5",
-              "9",
-              "4",
-              "6",
-              "20",
-              "-",
-              "14",
-              "-",
-              "4",
-              "100",
-              "7"
-            ],
-            [
-              "2021",
-              "11",
-              "30",
-              "4",
-              "9",
-              "3",
-              "4",
-              "21",
-              "-",
-              "14",
-              "-",
-              "4",
-              "100",
-              "10"
-            ],
-            [
-              "2022",
-              "8",
-              "34",
-              "5",
-              "7",
-              "5",
-              "5",
-              "20",
-              "-",
-              "14",
-              "-",
-              "2",
-              "100",
-              "9"
+              "11"
             ],
             [
               "2023",
@@ -7962,27 +7454,572 @@
               "9"
             ],
             [
-              "2024",
+              "2022",
               "8",
-              "33",
+              "34",
+              "5",
               "7",
-              "6",
-              "4",
-              "3",
-              "22",
-              null,
+              "5",
+              "5",
+              "20",
+              "-",
               "14",
-              null,
+              "-",
+              "2",
+              "100",
+              "9"
+            ],
+            [
+              "2021",
+              "11",
+              "30",
+              "4",
+              "9",
+              "3",
+              "4",
+              "21",
+              "-",
+              "14",
+              "-",
+              "4",
+              "100",
+              "10"
+            ],
+            [
+              "2020",
+              "10",
+              "28",
+              "5",
+              "9",
+              "4",
+              "6",
+              "20",
+              "-",
+              "14",
+              "-",
+              "4",
+              "100",
+              "7"
+            ],
+            [
+              "2019",
+              "9",
+              "26",
+              "6",
+              "10",
+              "5",
+              "7",
+              "17",
+              "-",
+              "17",
+              "-",
               "3",
               "100",
-              "11"
+              "9"
+            ],
+            [
+              "2018",
+              "8",
+              "29",
+              "5",
+              "10",
+              "6",
+              "7",
+              "18",
+              "-",
+              "13",
+              "1",
+              "3",
+              "100",
+              "8"
+            ],
+            [
+              "2017",
+              "6.5",
+              "32.5",
+              "3.9",
+              "13",
+              "6.1",
+              "2.8",
+              "16.3",
+              "-",
+              "13.8",
+              "1.6",
+              "3.4",
+              "100",
+              "8.9"
+            ],
+            [
+              "2016",
+              "6.4",
+              "28.6",
+              "4.6",
+              "8.2",
+              "5.8",
+              "2.5",
+              "24.1",
+              "-",
+              "14.1",
+              "2.3",
+              "3.5",
+              "100",
+              "12.9"
+            ],
+            [
+              "2015",
+              "7.44",
+              "26.36",
+              "7.15",
+              "8.39",
+              "5.86",
+              "3.73",
+              "22.34",
+              "-",
+              "14.84",
+              "2.27",
+              "1.62",
+              "100",
+              "10.77"
+            ],
+            [
+              "2014",
+              "6.32",
+              "30.52",
+              "8.88",
+              "6.86",
+              "6.97",
+              "4.33",
+              "22.56",
+              "-",
+              "9.55",
+              "2.48",
+              "1.52",
+              "100",
+              "8"
+            ],
+            [
+              "2013",
+              "6.44",
+              "30.62",
+              "11.12",
+              "3.22",
+              "6.07",
+              "3.86",
+              "27.14",
+              "-",
+              "8.55",
+              "0.25",
+              "2.75",
+              "100",
+              "7.36"
+            ],
+            [
+              "2012",
+              "5.26",
+              "33.03",
+              "9.82",
+              "3.76",
+              "6.01",
+              "2.98",
+              "30.19",
+              "-",
+              "7.19",
+              "0.42",
+              "1.34",
+              "100",
+              "8.68"
+            ],
+            [
+              "2011",
+              "5.43",
+              "28.36",
+              "11.77",
+              "4.48",
+              "6.73",
+              "2.94",
+              "33.63",
+              "-",
+              "5.18",
+              "0.3",
+              "1.18",
+              "100",
+              "8.35"
+            ],
+            [
+              "2010",
+              "4.39",
+              "26.75",
+              "11.12",
+              "4.95",
+              "7.88",
+              "4.11",
+              "33.33",
+              "-",
+              "4.2",
+              "0.73",
+              "2.55",
+              "100",
+              "6.75"
+            ],
+            [
+              "2009",
+              "5.33",
+              "28.92",
+              "10.62",
+              "4.44",
+              "7.7",
+              "3.66",
+              "28.67",
+              "-",
+              "3.82",
+              "-",
+              "6.85",
+              "100",
+              "9.01"
+            ],
+            [
+              "2008",
+              "6.15",
+              "39.17",
+              "7.8",
+              "5.49",
+              "6.91",
+              "4.07",
+              "23.93",
+              "-",
+              "4.46",
+              "-",
+              "2.02",
+              "100",
+              "7.18"
+            ],
+            [
+              "2007",
+              "5.7",
+              "38.9",
+              "8.44",
+              "5.99",
+              "9.04",
+              "4.78",
+              "22.25",
+              "-",
+              "2.45",
+              "-",
+              "2.45",
+              "100",
+              "8.56"
+            ],
+            [
+              "2006",
+              "5.93",
+              "32.76",
+              "7.82",
+              "7.72",
+              "7.16",
+              "6.81",
+              "27.09",
+              "-",
+              "2.18",
+              "-",
+              "2.54",
+              "100",
+              "7.94"
+            ],
+            [
+              "2005",
+              "5.85",
+              "36.11",
+              "6.29",
+              "6.58",
+              "9.41",
+              "4.48",
+              "26.92",
+              "-",
+              "-",
+              "-",
+              "4.35",
+              "100",
+              "10.19"
+            ],
+            [
+              "2004",
+              "8.86",
+              "35.36",
+              "5.59",
+              "6.9",
+              "10.53",
+              "5.07",
+              "23.09",
+              "-",
+              "-",
+              "-",
+              "4.6",
+              "100",
+              "10.91"
+            ],
+            [
+              "2003",
+              "9.59",
+              "37.56",
+              "5.68",
+              "7.61",
+              "12.3",
+              "7.52",
+              "16.78",
+              "-",
+              "-",
+              "-",
+              "2.95",
+              "100",
+              "9.52"
+            ],
+            [
+              "2002",
+              "8.64",
+              "41.48",
+              "4.25",
+              "6.55",
+              "16.6",
+              "7.81",
+              "11.57",
+              "-",
+              "-",
+              "-",
+              "3.11",
+              "100",
+              "7.34"
+            ],
+            [
+              "2001",
+              "12.17",
+              "38.71",
+              "3.74",
+              "6.33",
+              "4.23",
+              "10.84",
+              "21.47",
+              "-",
+              "-",
+              "-",
+              "2.5",
+              "100",
+              "11.02"
+            ],
+            [
+              "2000",
+              "15.66",
+              "32.04",
+              "4.93",
+              "3.98",
+              "4.89",
+              "12.8",
+              "23.34",
+              "-",
+              "-",
+              "-",
+              "2.35",
+              "100",
+              "10.12"
+            ],
+            [
+              "1999",
+              "14.62",
+              "31.23",
+              "6.11",
+              "3.82",
+              "5.08",
+              "12.56",
+              "24.52",
+              "-",
+              "-",
+              "-",
+              "2.06",
+              "100",
+              "11.16"
+            ],
+            [
+              "1998",
+              "12.69",
+              "35.76",
+              "5.83",
+              "4.51",
+              "5.08",
+              "11.58",
+              "22.11",
+              "-",
+              "-",
+              "-",
+              "2.44",
+              "100",
+              "6.63"
+            ],
+            [
+              "1997",
+              "9.6",
+              "33.42",
+              "8.42",
+              "4.83",
+              "6.2",
+              "4.05",
+              "29.5",
+              "-",
+              "-",
+              "-",
+              "3.98",
+              "100",
+              "12.66"
+            ],
+            [
+              "1996",
+              "13.07",
+              "31.22",
+              "8.69",
+              "6.41",
+              "6.47",
+              "3.87",
+              "27.03",
+              "-",
+              "-",
+              "-",
+              "3.24",
+              "100",
+              "11.41"
+            ],
+            [
+              "1995",
+              "13.39",
+              "30.72",
+              "12.4",
+              "5.98",
+              "5.12",
+              "3.21",
+              "26.59",
+              "-",
+              "-",
+              "-",
+              "2.59",
+              "100",
+              "8.78"
+            ],
+            [
+              "1994",
+              "6.93",
+              "43.04",
+              "5.38",
+              "7.3",
+              "8.16",
+              "3.4",
+              "21.83",
+              "1.36",
+              "-",
+              "-",
+              "2.6",
+              "100",
+              "5.11"
+            ],
+            [
+              "1993",
+              "2.98",
+              "45.04",
+              "3.09",
+              "5.37",
+              "8.69",
+              "3.56",
+              "21.59",
+              "6.42",
+              "-",
+              "-",
+              "3.27",
+              "100",
+              "7.7"
+            ],
+            [
+              "1992",
+              "3.84",
+              "42.51",
+              "3.1",
+              "5.85",
+              "7.34",
+              "2.64",
+              "21.76",
+              "10.56",
+              "-",
+              "-",
+              "2.41",
+              "100",
+              "7.73"
+            ],
+            [
+              "1990",
+              "7.21",
+              "29.12",
+              "5.2",
+              "8.77",
+              "13.08",
+              "5.27",
+              "27.93",
+              "-",
+              "-",
+              "-",
+              "3.42",
+              "100",
+              "14.92"
+            ],
+            [
+              "1989",
+              "7.35",
+              "34.51",
+              "7.35",
+              "8.07",
+              "15.49",
+              "3.03",
+              "21.76",
+              "-",
+              "-",
+              "-",
+              "2.45",
+              "100",
+              "12.04"
+            ],
+            [
+              "1987",
+              "2.78",
+              "43.2",
+              "8.26",
+              "6.09",
+              "20.38",
+              "1.9",
+              "16.72",
+              "-",
+              "-",
+              "-",
+              "0.68",
+              "100",
+              "11.61"
+            ],
+            [
+              "1986",
+              "3.17",
+              "45.38",
+              "5.39",
+              "7.89",
+              "17.94",
+              "1.01",
+              "18",
+              "-",
+              "-",
+              "-",
+              "1.21",
+              "100",
+              "8.68"
             ]
           ],
           "typ": "Tabell",
           "rubrik": "PARTISYMPATI",
           "underrubrik": null,
           "fraga": "\"Vilket parti tycker du bäst om idag\"",
-          "kommentar": "Resultaten är oviktade och bygger på samtliga som besvarat frågan. I kolumnen 'Inget parti' redovisas de som inte har svarat på frågan och som därför inte ingår i basen."
+          "kommentar": "Resultaten är oviktade och bygger på samtliga som besvarat frågan. I kolumnen 'Inget parti' redovisas de som inte har svarat på frågan och som därför inte ingår i basen.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiövertygelse",
@@ -8177,7 +8214,8 @@
           "rubrik": "PARTIÖVERTYGELSE",
           "underrubrik": null,
           "fraga": "\"Anser du dig vara en övertygad anhängare av detta parti?\"",
-          "kommentar": "Frågan är endast ställd till dem som uppgivit sig sympatisera med något politiskt parti. Procentbasen utgörs av samtliga svarande."
+          "kommentar": "Frågan är endast ställd till dem som uppgivit sig sympatisera med något politiskt parti. Procentbasen utgörs av samtliga svarande.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -8328,7 +8366,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Vänsterpartiet)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Lars Werner 1986–1992, Gudrun Schyman 1993–2002, Ulla Hoffman 2003, Lars Ohly 2004–2011, Jonas Sjöstedt 2012–2020 och Nooshi Dadgostar 2021-2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Lars Werner 1986–1992, Gudrun Schyman 1993–2002, Ulla Hoffman 2003, Lars Ohly 2004–2011, Jonas Sjöstedt 2012–2020 och Nooshi Dadgostar 2021-2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -8479,7 +8518,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Socialdemokraterna)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Ingvar Carlsson 1986–1995, Göran Persson 1996–2006, Mona Sahlin 2007–2010, Håkan Juholt 2011, Stefan Löfven 2012–2021 och Magdalena Andersson 2022-2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Ingvar Carlsson 1986–1995, Göran Persson 1996–2006, Mona Sahlin 2007–2010, Håkan Juholt 2011, Stefan Löfven 2012–2021 och Magdalena Andersson 2022-2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -8630,7 +8670,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Centerpartiet)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Karin Söder 1986, Olof Johansson 1987–1997, Lennart Daléus 1998–2000, Maud Olofsson 2001–2011, Annie Lööf 2012–2022 och Muharrem Demirok 2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Karin Söder 1986, Olof Johansson 1987–1997, Lennart Daléus 1998–2000, Maud Olofsson 2001–2011, Annie Lööf 2012–2022 och Muharrem Demirok 2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -8781,7 +8822,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Liberalerna)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Bengt Westerberg 1986–1994, Maria Leissner 1995–1996, Lars Leijonborg 1997–2006, Jan Björklund 2007–2018, Nyamko Sabuni 2019–2021, Johan Pehrson 2022-2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Bengt Westerberg 1986–1994, Maria Leissner 1995–1996, Lars Leijonborg 1997–2006, Jan Björklund 2007–2018, Nyamko Sabuni 2019–2021, Johan Pehrson 2022-2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -8926,7 +8968,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Kristdemokraterna)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Alf Svensson 1988–2003, Göran Hägglund 2004–2014 och Ebba Busch 2015–2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Alf Svensson 1988–2003, Göran Hägglund 2004–2014 och Ebba Busch 2015–2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1988–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -9077,7 +9120,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Moderaterna)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Carl Bildt 1986–1998, Bo Lundgren 1999–2003, Fredrik Reinfeldt 2004–2014, Anna Kinberg Batra 2015–2017 och Ulf Kristersson 2018–2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Carl Bildt 1986–1998, Bo Lundgren 1999–2003, Fredrik Reinfeldt 2004–2014, Anna Kinberg Batra 2015–2017 och Ulf Kristersson 2018–2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -9207,7 +9251,8 @@
           "rubrik": "PARTILEDARPOPULARITET (Miljöpartiet)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Resultaten gäller för MP:s manliga språkrör Birger Schlaug t o m 1997. Därefter är resultaten sammanvägda för kvinnliga och manliga språkrör. 1998 Birger Schlaug och Marianne Samuelsson, 1999 Birger Schlaug och Lotta Nilsson-Hedström, 2000–2001 Matz Hammarström och Lotta Nilsson-Hedström, 2002–2010 Peter Eriksson och Maria Wetterstrand, 2011–2015 Åsa Romson och Gustav Fridolin, 2016–2018 Isabella Lövin och Gustav Fridolin, 2019-2020 Per Bolund och Isabella Lövin, 2021-2023 Per Bolund och Märta Stenevi, 2024- Amanda Lind och Daniel Helldén. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen multipliceras resultaten med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Resultaten gäller för MP:s manliga språkrör Birger Schlaug t o m 1997. Därefter är resultaten sammanvägda för kvinnliga och manliga språkrör. 1998 Birger Schlaug och Marianne Samuelsson, 1999 Birger Schlaug och Lotta Nilsson-Hedström, 2000–2001 Matz Hammarström och Lotta Nilsson-Hedström, 2002–2010 Peter Eriksson och Maria Wetterstrand, 2011–2015 Åsa Romson och Gustav Fridolin, 2016–2018 Isabella Lövin och Gustav Fridolin, 2019-2020 Per Bolund och Isabella Lövin, 2021-2023 Per Bolund och Märta Stenevi, 2024- Amanda Lind och Daniel Helldén. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen multipliceras resultaten med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1993–2024"
         },
         {
           "title": "Partiledarpopularitet",
@@ -9295,12 +9340,13 @@
           "rubrik": "PARTILEDARPOPULARITET (Sverigedemokraterna)",
           "underrubrik": null,
           "fraga": "\"Om du skulle använda samma skala för några partiledare och andra ledande politiker, var \"skulle du placera:\", frågan följer en fråga som lyder \"Var skulle du vilja placera de olika partierna på nedanstående skala?\"",
-          "kommentar": "Mätningen gäller Jimmie Åkesson 2007–2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan."
+          "kommentar": "Mätningen gäller Jimmie Åkesson 2007–2023. Respondenterna fick använda sig av en skala mellan -5 (ogillar) och 5 (gillar). I redovisningen har resultaten multiplicerats med 10. Medelpoängen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 2007–2024"
         }
       ]
     },
     {
-      "title": "POL SAKFRÅGOR",
+      "title": "POLITISKA SAKFRÅGOR",
       "slug": "pol-sakfragor",
       "indicators": [
         {
@@ -10094,7 +10140,8 @@
           "rubrik": "MEDBORGARNAS VIKTIGASTE SAMHÄLLSPROBLEM",
           "underrubrik": null,
           "fraga": "\"Vilken eller vilka frågor eller samhällsproblem tycker du är viktigast i Sverige idag?\"",
-          "kommentar": "Frågan är öppen utan svarsalternativ. Procentbasen utgörs av samtliga svarande. Respondenterna ombads att ange högst tre frågor/samhällsproblem. Tabellen redovisar de 15 största kategorierna det gällande året."
+          "kommentar": "Frågan är öppen utan svarsalternativ. Procentbasen utgörs av samtliga svarande. Respondenterna ombads att ange högst tre frågor/samhällsproblem. Tabellen redovisar de 15 största kategorierna det gällande året.",
+          "kalla": "Den nationella SOM-undersökningen 1987–2024"
         },
         {
           "title": "Kärnkraftsopinion",
@@ -10245,7 +10292,8 @@
           "rubrik": "KÄRNKRAFTSOPINION",
           "underrubrik": null,
           "fraga": "Sedan SOM-undersökningen 2010 lyder frågan “Vilken är din åsikt om kärnkraftens långsiktiga användning som energikälla i Sverige?\" Sedan SOM-undersökningen 2020 lyder svarsalternativen: Avveckla kärnkraften snarast; Avveckla kärnkraften men utnyttja de kärnkraftsreaktorer vi har tills de tjänat ut; Använd kärnkraften och ersätt de nuvarande reaktorerna med som mest lika många nya som idag; Använd kärnkraften och bygg fler reaktorer än de nuvarande i framtiden; Ingen uppfattning.",
-          "kommentar": "Frågeformuleringen och svarslaternativen har varierat något genom åren. För mer information, se Holmberg, Public Opinion on Nuclear Power 1986–2013, tillgänglig på www.gu.se/som-institutet Svarsalternativen 1 och 2 har definierats som Avveckla medan svarsalternativen 3 och 4 indikerar Använd. Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Frågeformuleringen och svarslaternativen har varierat något genom åren. För mer information, se Holmberg, Public Opinion on Nuclear Power 1986–2013, tillgänglig på www.gu.se/som-institutet Svarsalternativen 1 och 2 har definierats som Avveckla medan svarsalternativen 3 och 4 indikerar Använd. Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Satsa mer än idag på olika energikällor",
@@ -10605,7 +10653,8 @@
           "rubrik": "SATSA MER ÄN IDAG PÅ OLIKA ENERGIKÄLLOR",
           "underrubrik": "Andel svenskar som anser att Sverige, mer än idag, skall satsa på följande energikällor",
           "fraga": "”Hur mycket bör vi i Sverige satsa på nedanstående energikällor under de närmaste 5–10 åren?”",
-          "kommentar": "Svarsalternativen är \"satsa mer än idag\"; \"satsa ungefär som idag\"; \"satsa mindre än idag\"; \"helt avstå från energikällan\" samt \"ingen åsikt\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är \"satsa mer än idag\"; \"satsa ungefär som idag\"; \"satsa mindre än idag\"; \"helt avstå från energikällan\" samt \"ingen åsikt\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1999–2024"
         },
         {
           "title": "Minska den offentliga sektorn",
@@ -10800,7 +10849,8 @@
           "rubrik": "MINSKA DEN OFFENTLIGA SEKTORN",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? - Minska den offentliga sektorn\"",
-          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Införa sex timmars arbetsdag",
@@ -10955,7 +11005,8 @@
           "rubrik": "INFÖRA SEX TIMMARS ARBETSDAG",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? - Införa sex timmars arbetsdag\"",
-          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1996–2024"
         },
         {
           "title": "Ta emot färre flyktingar",
@@ -11134,7 +11185,8 @@
           "rubrik": "TA EMOT FÄRRE FLYKTINGAR",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? - Ta emot färre flyktingar i Sverige\"",
-          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1990–2024"
         },
         {
           "title": "Behålla eller avskaffa monarkin",
@@ -11261,7 +11313,8 @@
           "rubrik": "BEHÅLLA ELLER AVSKAFFA MONARKIN",
           "underrubrik": null,
           "fraga": "\"Tycker du att Sverige ska behålla eller avskaffa monarkin?\"",
-          "kommentar": "Svarsalternativen är \"behålla monarkin\"; \"avskaffa monarkin\" samt \"ingen åsikt\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"behålla monarkin\"; \"avskaffa monarkin\" samt \"ingen åsikt\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 2003–2024"
         },
         {
           "title": "Inställning till förstatligande",
@@ -11337,7 +11390,8 @@
           "rubrik": "INSTÄLLNING TILL FÖRSTATLIGANDE",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag?\"",
-          "kommentar": "Resultaten visar andel som svarat mycket eller ganska bra förslag. Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Resultaten visar andel som svarat mycket eller ganska bra förslag. Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 2011–2024"
         },
         {
           "title": "Inställning till privatisering av den offentliga sektorn",
@@ -11614,7 +11668,8 @@
           "rubrik": "INSTÄLLNING TILL PRIVATISERING AV DEN OFFENTLIGA SEKTORN",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag?\"",
-          "kommentar": "Svarsalternativen är “mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\"; \"mycket dåligt förslag”. Resultaten redovisar de som svarat “mycket\" eller \"ganska bra förslag\". Förhindra företag med syfte att driva sjukhus: Före 2004 löd frågan \"Förhindra företag med vinstsyfte att driva akutsjukhus\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är “mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\"; \"mycket dåligt förslag”. Resultaten redovisar de som svarat “mycket\" eller \"ganska bra förslag\". Förhindra företag med syfte att driva sjukhus: Före 2004 löd frågan \"Förhindra företag med vinstsyfte att driva akutsjukhus\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1987–2024"
         },
         {
           "title": "Inställning till miljö, jämställdhet och alkohol",
@@ -11818,7 +11873,8 @@
           "rubrik": "INSTÄLLNING TILL MILJÖ, JÄMSTÄLLDHET OCH ALKOHOL",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag?\"",
-          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Resultaten redovisar de som svarat “mycket\" eller \"ganska bra förslag\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Svarsalternativen är \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\" samt \"mycket dåligt förslag\". Resultaten redovisar de som svarat “mycket\" eller \"ganska bra förslag\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 1993–2024"
         },
         {
           "title": "Inställning till rättigheter och lika värde",
@@ -12098,7 +12154,8 @@
           "rubrik": "INSTÄLLNING TILL RÄTTIGHETER OCH LIKA VÄRDE",
           "underrubrik": null,
           "fraga": "\"Nedan finns ett antal förslag hämtade från den svenska samhällsdebatten. Vilken är din uppfattning om vart och ett av dem?”",
-          "kommentar": "Resultaten visar andel som svarat mycket eller ganska bra förslag bland personerna som besvarade värderingsfrågorna. Svarsalternativen är: \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\"; \"mycket dåligt förslag\" samt \"ingen uppfattning\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Resultaten visar andel som svarat mycket eller ganska bra förslag bland personerna som besvarade värderingsfrågorna. Svarsalternativen är: \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\"; \"mycket dåligt förslag\" samt \"ingen uppfattning\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 2001–2024"
         },
         {
           "title": "Inställning till straff och begränsningar",
@@ -12221,7 +12278,8 @@
           "rubrik": "INSTÄLLNING TILL STRAFF OCH BEGRÄNSNINGAR",
           "underrubrik": null,
           "fraga": "\"Nedan finns ett antal förslag hämtade från den svenska samhällsdebatten. Vilken är din uppfattning om vart och ett av dem?”",
-          "kommentar": "Resultaten visar andel som svarat mycket eller ganska bra förslag bland personerna som besvarade värderingsfrågorna. Svarsalternativen är: \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\"; \"mycket dåligt förslag\" samt \"ingen uppfattning\". Procentbasen utgörs av dem som besvarat respektive fråga."
+          "kommentar": "Resultaten visar andel som svarat mycket eller ganska bra förslag bland personerna som besvarade värderingsfrågorna. Svarsalternativen är: \"mycket bra förslag\"; \"ganska bra förslag\"; \"varken bra eller dåligt förslag\"; \"ganska dåligt förslag\"; \"mycket dåligt förslag\" samt \"ingen uppfattning\". Procentbasen utgörs av dem som besvarat respektive fråga.",
+          "kalla": "Den nationella SOM-undersökningen 2004–2024"
         }
       ]
     },
@@ -12418,7 +12476,8 @@
           "rubrik": "MINSKA BISTÅNDET TILL UTVECKLINGSLÄNDERNA",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? -Minska biståndet till utvecklingsländerna\"",
-          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1987–2024"
         },
         {
           "title": "Minska försvarsutgifterna",
@@ -12613,7 +12672,8 @@
           "rubrik": "MINSKA FÖRSVARSUTGIFTERNA",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? - Minska försvarsutgifterna\"",
-          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"Ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"Ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1986–2024"
         },
         {
           "title": "Åsikter om eu-medlemskapet",
@@ -12784,7 +12844,8 @@
           "rubrik": "ÅSIKTER OM EU-MEDLEMSKAPET",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om det svenska EU-medlemskapet?\"",
-          "kommentar": "Svarsalternativen är \"I huvudsak för det svenska medlemskapet i EU; \"I huvudsak emot det svenska medlemsskapet i EU\" samt  \"Ingen bestämd åsikt i frågan\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"I huvudsak för det svenska medlemskapet i EU; \"I huvudsak emot det svenska medlemsskapet i EU\" samt  \"Ingen bestämd åsikt i frågan\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1992–2024"
         },
         {
           "title": "Inställning till att införa euro",
@@ -12943,7 +13004,8 @@
           "rubrik": "INSTÄLLNING TILL ATT INFÖRA EURO",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? - Sverige bör införa euro som valuta\"",
-          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1995–2024"
         },
         {
           "title": "Åsikter om svenskt medlemskap i Nato",
@@ -13098,7 +13160,8 @@
           "rubrik": "ÅSIKTER OM SVENSKT MEDLEMSKAP I NATO",
           "underrubrik": null,
           "fraga": "\"Vilken är din åsikt om följande förslag? - 1994-2021: \"Sverige bör söka medlemskap i Nato\", 2022: \"Sverige bör bli medlem i NATO\"",
-          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan."
+          "kommentar": "Svarsalternativen är \"Mycket bra förslag\"; \"Ganska bra förslag\"; \"Varken bra eller dåligt förslag\"; \"Ganska dåligt förslag\" samt \"Mycket dåligt förslag\".  \"Bra förslag\" avser dem som svarat \"ganska\" eller \"mycket bra förslag\". \"Dåligt förslag\" avser dem som svarat \"ganska\" eller \"mycket dåligt förslag\". Procentbasen utgörs av dem som besvarat frågan.",
+          "kalla": "Den nationella SOM-undersökningen 1994–2022"
         }
       ]
     }

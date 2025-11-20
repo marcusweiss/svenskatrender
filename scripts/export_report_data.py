@@ -243,8 +243,8 @@ def extract_table_data(ws) -> Optional[List[List[Optional[str]]]]:
 
 
 def extract_metadata(ws) -> Dict[str, Optional[str]]:
-    """Extract 'Rubrik', 'Underrubrik', 'Fråga', 'Kommentar', and 'Typ' from worksheet."""
-    metadata = {"rubrik": None, "underrubrik": None, "fraga": None, "kommentar": None, "typ": None}
+    """Extract 'Rubrik', 'Underrubrik', 'Fråga', 'Kommentar', 'Typ', and 'Källa' from worksheet."""
+    metadata = {"rubrik": None, "underrubrik": None, "fraga": None, "kommentar": None, "typ": None, "kalla": None}
     
     # Search more thoroughly - check first 300 rows and 30 columns
     for row_idx in range(1, min(301, ws.max_row + 1)):
@@ -344,6 +344,25 @@ def extract_metadata(ws) -> Dict[str, Optional[str]]:
                             below_value = str(below_cell.value).strip()
                             if below_value and below_value.lower() not in ["fråga", "kommentar", "typ", "rubrik", "underrubrik", ""]:
                                 metadata["underrubrik"] = below_value
+                
+                # Check for "Källa" - exact match (case-insensitive)
+                if cell_value.lower() == "källa" and not metadata["kalla"]:
+                    # Try next cell in same row (most common pattern: "Källa" | "Source text")
+                    for next_col in range(col_idx + 1, min(col_idx + 5, ws.max_column + 1)):
+                        next_cell = ws.cell(row_idx, next_col)
+                        if next_cell.value:
+                            next_value = str(next_cell.value).strip()
+                            # Skip if it's just another metadata label or empty
+                            if next_value and next_value.lower() not in ["fråga", "kommentar", "typ", "rubrik", "underrubrik", "källa", ""]:
+                                metadata["kalla"] = next_value
+                                break
+                    # Also try cell below (sometimes label is above value)
+                    if not metadata["kalla"] and row_idx < ws.max_row:
+                        below_cell = ws.cell(row_idx + 1, col_idx)
+                        if below_cell.value:
+                            below_value = str(below_cell.value).strip()
+                            if below_value and below_value.lower() not in ["fråga", "kommentar", "typ", "rubrik", "underrubrik", "källa", ""]:
+                                metadata["kalla"] = below_value
     
     return metadata
 
@@ -355,8 +374,14 @@ def build_sections(workbook, charts: Dict[str, List[Dict]]) -> List[Dict]:
 
     for sheet_name in workbook.sheetnames:
         if is_section_name(sheet_name):
+            # Expand abbreviations in section titles
+            section_title = sheet_name
+            # Handle various possible spellings/cases
+            if sheet_name.upper().replace(" ", "") == "POLSAKFRÅGOR" or sheet_name.upper() == "POL SAKFRÅGOR":
+                section_title = "POLITISKA SAKFRÅGOR"
+            
             section = {
-                "title": sheet_name,
+                "title": section_title,
                 "slug": slugify(sheet_name),
                 "indicators": [],
             }
@@ -375,14 +400,17 @@ def build_sections(workbook, charts: Dict[str, List[Dict]]) -> List[Dict]:
             table_data = extract_table_data(ws)
         
         # Check if we need to reverse the order (latest year first)
-        # For "Medborgarnas viktigaste samhällsproblem" and "Oro: Samtliga områden"
+        # For "Medborgarnas viktigaste samhällsproblem", "Oro: Samtliga områden", and "Partisympati"
         needs_reverse = False
         raw_rubrik = metadata.get("rubrik", "").lower() if metadata.get("rubrik") else ""
         raw_underrubrik_check = metadata.get("underrubrik", "").lower() if metadata.get("underrubrik") else ""
+        raw_sheet_name = sheet_name.lower() if sheet_name else ""
         
         if "medborgarnas viktigaste samhällsproblem" in raw_rubrik:
             needs_reverse = True
         elif "vad svenskar oroar sig" in raw_rubrik and ("arbetslöshet och ekonomisk kris" in raw_underrubrik_check or "samtliga områden" in raw_underrubrik_check):
+            needs_reverse = True
+        elif "partisympati" in raw_rubrik or "partisymp" in raw_sheet_name:
             needs_reverse = True
         
         # Reverse chart data if needed
@@ -494,6 +522,7 @@ def build_sections(workbook, charts: Dict[str, List[Dict]]) -> List[Dict]:
             "underrubrik": display_underrubrik,  # Include underrubrik field (converted to title case)
             "fraga": metadata["fraga"],
             "kommentar": metadata["kommentar"],
+            "kalla": metadata["kalla"],  # Include källa field
         }
         current_section["indicators"].append(indicator)
         processed_sheets.append(sheet_name)

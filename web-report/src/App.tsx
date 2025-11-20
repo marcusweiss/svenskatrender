@@ -7,7 +7,6 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-  Legend,
   LabelList,
 } from 'recharts'
 import type { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent'
@@ -38,6 +37,7 @@ type Indicator = {
   kommentar?: string | null
   underrubrik?: string | null
   rubrik?: string | null
+  kalla?: string | null
 }
 
 type Section = {
@@ -66,6 +66,54 @@ const formatChartData = (chart?: ChartDefinition) => {
     })
     return point
   })
+}
+
+const getYearRange = (indicator: Indicator): string | null => {
+  // Try to get years from chart categories
+  if (indicator.charts && indicator.charts.length > 0) {
+    const firstChart = indicator.charts[0]
+    if (firstChart.categories && firstChart.categories.length > 0) {
+      const years = firstChart.categories
+        .map(cat => {
+          if (typeof cat === 'number') return cat
+          if (typeof cat === 'string') {
+            const num = parseInt(cat, 10)
+            if (!isNaN(num) && num > 1900 && num < 2100) return num
+          }
+          return null
+        })
+        .filter((year): year is number => year !== null)
+      
+      if (years.length > 0) {
+        const firstYear = Math.min(...years)
+        const lastYear = Math.max(...years)
+        return `Den Nationella SOM-undersökningen ${firstYear}-${lastYear}`
+      }
+    }
+  }
+  
+  // Try to get years from table data (first column after header)
+  if (indicator.table && indicator.table.length > 1) {
+    const years: number[] = []
+    for (let i = 1; i < indicator.table.length; i++) {
+      const firstCell = indicator.table[i][0]
+      if (firstCell) {
+        const year = typeof firstCell === 'number' 
+          ? firstCell 
+          : parseInt(String(firstCell), 10)
+        if (!isNaN(year) && year > 1900 && year < 2100) {
+          years.push(year)
+        }
+      }
+    }
+    if (years.length > 0) {
+      const firstYear = Math.min(...years)
+      const lastYear = Math.max(...years)
+      return `Den Nationella SOM-undersökningen ${firstYear}-${lastYear}`
+    }
+  }
+  
+  return null
 }
 
 
@@ -155,7 +203,7 @@ function App() {
     <div className="app-shell">
       <header className="top-header">
         <img 
-          src="/SOM_Huvud_CMYK_GUright.jpg" 
+          src={`${import.meta.env.BASE_URL}SOM_Huvud_CMYK_GUright.jpg`} 
           alt="SOM-institutet och Göteborgs Universitet" 
           className="header-logo-combined" 
           onError={(e) => {
@@ -185,8 +233,7 @@ function App() {
       </button>
       <aside className={`sidebar ${isMobileMenuOpen ? 'is-open' : ''}`}>
         <div className="sidebar__header">
-          <p className="sidebar__eyebrow">Svenska Trender 1986–2024</p>
-          <h1>Samhällsrapport</h1>
+          <h1>Svenska Trender 1986–2024</h1>
           {report && (
             <p className="sidebar__meta">
               Uppdaterad {new Date(report.generated_at).toLocaleDateString('sv-SE')}
@@ -196,7 +243,7 @@ function App() {
         <div className="sidebar__search">
           <input
             type="text"
-            placeholder="Sök indikator..."
+            placeholder="Sök fråga..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
@@ -217,7 +264,7 @@ function App() {
                     setSelectedIndicator(section.indicators[0]?.slug ?? null)
                   }}
                 >
-                  {section.title}
+                  {section.title === "POL SAKFRÅGOR" ? "POLITISKA SAKFRÅGOR" : section.title}
                 </button>
                 <ul className="nav-section__list">
                   {section.indicators.map((indicator) => (
@@ -278,7 +325,7 @@ function App() {
         {report && activeIndicator && (
           <>
             <header className="content__header">
-              <p className="content__eyebrow">{activeSection?.title}</p>
+              <p className="content__eyebrow">{activeSection?.title === "POL SAKFRÅGOR" ? "POLITISKA SAKFRÅGOR" : activeSection?.title}</p>
               <h2>
                 {(() => {
                   const titleLower = activeIndicator.title.toLowerCase()
@@ -302,7 +349,16 @@ function App() {
                   if (titleLower.includes('förtroende') && activeIndicator.underrubrik) {
                     return `${activeIndicator.title}: ${activeIndicator.underrubrik}`
                   }
-                  return activeIndicator.title
+                  // Partisympati: add (procent) to title
+                  if (titleLower.includes('partisympati')) {
+                    return `${activeIndicator.title} (procent)`
+                  }
+                  let displayTitle = activeIndicator.title
+                  // Replace POL SAKFRÅGOR with POLITISKA SAKFRÅGOR in indicator titles
+                  if (displayTitle.includes("POL SAKFRÅGOR")) {
+                    displayTitle = displayTitle.replace(/POL SAKFRÅGOR/g, "POLITISKA SAKFRÅGOR")
+                  }
+                  return displayTitle
                 })()}
               </h2>
             </header>
@@ -321,8 +377,9 @@ function App() {
                               const CellTag = isHeader ? 'th' : 'td'
                               let displayValue = cell ?? ''
                               
-                              // For "Oro: Samtliga områden" table, round numeric values (skip header and year column)
-                              if (isOroSamtliga && !isHeader && cellIdx > 0 && cell) {
+                              // For "Oro: Samtliga områden" and "Partisympati" tables, round numeric values (skip header and year column)
+                              const isPartisympati = activeIndicator.title.toLowerCase().includes('partisympati')
+                              if ((isOroSamtliga || isPartisympati) && !isHeader && cellIdx > 0 && cell) {
                                 const numValue = typeof cell === 'string' ? parseFloat(cell) : (typeof cell === 'number' ? cell : null)
                                 if (numValue !== null && !isNaN(numValue)) {
                                   displayValue = Math.round(numValue).toString()
@@ -341,22 +398,35 @@ function App() {
                     </tbody>
                   </table>
                 </div>
-                {(activeIndicator.fraga || activeIndicator.kommentar) && (
-                  <div className="chart-card__metadata">
-                    {activeIndicator.fraga && (
-                      <div className="metadata-box">
-                        <h4 className="metadata-box__label">Fråga</h4>
-                        <p className="metadata-box__content">{activeIndicator.fraga}</p>
+                  {(activeIndicator.fraga || activeIndicator.kommentar) && (
+                    <div className="chart-card__metadata">
+                      <div className="metadata-layout">
+                        {activeIndicator.kommentar && (
+                          <div className="metadata-box metadata-box--left">
+                            <h4 className="metadata-box__label">Kommentar</h4>
+                            <p className="metadata-box__content">{activeIndicator.kommentar}</p>
+                          </div>
+                        )}
+                        <div className="metadata-box metadata-box--right">
+                          {activeIndicator.fraga && (
+                            <div className="metadata-item">
+                              <h4 className="metadata-box__label">Fråga</h4>
+                              <p className="metadata-box__content">{activeIndicator.fraga}</p>
+                            </div>
+                          )}
+                          {(() => {
+                            const kallaText = getYearRange(activeIndicator)
+                            return kallaText ? (
+                              <div className="metadata-item">
+                                <h4 className="metadata-box__label">Källa</h4>
+                                <p className="metadata-box__content">{kallaText}</p>
+                              </div>
+                            ) : null
+                          })()}
+                        </div>
                       </div>
-                    )}
-                    {activeIndicator.kommentar && (
-                      <div className="metadata-box">
-                        <h4 className="metadata-box__label">Kommentar</h4>
-                        <p className="metadata-box__content">{activeIndicator.kommentar}</p>
-                      </div>
-                    )}
-                  </div>
-                )}
+                    </div>
+                  )}
               </section>
             )}
             {activeIndicator.charts.map((chart) => {
@@ -364,7 +434,9 @@ function App() {
               // For "Oro: Samtliga områden", round all values to remove decimals
               const isOroSamtliga = activeIndicator.underrubrik && 
                                    activeIndicator.underrubrik.toLowerCase().trim() === "samtliga områden"
-              if (isOroSamtliga) {
+              // For "Partisympati", round all values to remove decimals
+              const isPartisympati = activeIndicator.title.toLowerCase().includes('partisympati')
+              if (isOroSamtliga || isPartisympati) {
                 chartRows = chartRows.map((row) => {
                   const roundedRow: any = { category: row.category }
                   Object.keys(row).forEach((key) => {
@@ -404,8 +476,8 @@ function App() {
               return (
                 <section key={chart.id} className="chart-card">
                   <div className="chart-card__body">
-                    <ResponsiveContainer width="100%" height={420}>
-                      <LineChart data={chartRows} margin={{ top: 16, right: 80, left: 12, bottom: 8 }}>
+                    <ResponsiveContainer width="100%" height={480}>
+                      <LineChart data={chartRows} margin={{ top: 16, right: 180, left: 12, bottom: 16 }}>
                         <CartesianGrid stroke="#E5E7EB" vertical={false} />
                         <XAxis
                           dataKey="category"
@@ -437,17 +509,6 @@ function App() {
                           }}
                           labelFormatter={(label) => `År ${label}`}
                         />
-                        <Legend 
-                          wrapperStyle={{ paddingTop: 12 }} 
-                          formatter={(value: string) => {
-                            // For Partiledarpopularitet, add underrubrik to each series name
-                            const isPartiledare = activeIndicator.title.toLowerCase().includes('partiledarpopularitet')
-                            if (isPartiledare && activeIndicator.underrubrik) {
-                              return `${value}: ${activeIndicator.underrubrik}`
-                            }
-                            return value
-                          }}
-                        />
                         {chart.series.map((serie, index) => {
                           const color = palette[index % palette.length]
                           // Find the last valid data point index for this series
@@ -463,22 +524,10 @@ function App() {
                           // Check if this is partiledarpopularitet (no % sign)
                           const isPartiledare = activeIndicator.title.toLowerCase().includes('partiledarpopularitet')
                           
-                          // Collect all last values to calculate vertical offsets and prevent overlap
-                          const lastValues: number[] = []
-                          chart.series.forEach((s, idx) => {
-                            for (let i = chartRows.length - 1; i >= 0; i--) {
-                              const val = chartRows[i][s.name]
-                              if (val !== null && val !== undefined && !isNaN(Number(val))) {
-                                lastValues[idx] = Number(val)
-                                break
-                              }
-                            }
-                          })
-                          
                           return (
                             <Line
                               key={serie.name}
-                              type="monotone"
+                              type="linear"
                               dataKey={serie.name}
                               stroke={color}
                               strokeWidth={2.5}
@@ -494,14 +543,51 @@ function App() {
                                   // Only show label for the last valid data point
                                   if (pointIndex === lastValidIndex && lastValidIndex >= 0) {
                                     if (value !== null && value !== undefined && !isNaN(Number(value))) {
-                                      // Calculate vertical offset to prevent overlap
-                                      // Use a small offset based on series index to naturally spread labels
-                                      // This prevents exact overlap when lines are close together
-                                      const verticalOffset = (index - (chart.series.length - 1) / 2) * 6
+                                      // Simple small offset based on index to prevent exact overlap
+                                      // This keeps labels close to their data points
+                                      const verticalOffset = (index - (chart.series.length - 1) / 2) * 3
                                       
-                                      // Format value - no % for partiledarpopularitet
+                                      // Format value - no % for partiledarpopularitet, round for partisympati
+                                      const isPartisympati = activeIndicator.title.toLowerCase().includes('partisympati')
                                       const displayValue = Math.round(Number(value))
-                                      const labelText = isPartiledare ? `${displayValue}` : `${displayValue}%`
+                                      const percentageText = isPartiledare ? `${displayValue}` : `${displayValue}%`
+                                      // Add series name (label) to the value
+                                      const fullLabel = `${percentageText} ${serie.name}`
+                                      
+                                      // Split long labels into two lines if needed (max 28 chars per line)
+                                      const maxLength = 28
+                                      if (fullLabel.length > maxLength) {
+                                        const spaceIndex = fullLabel.lastIndexOf(' ', maxLength)
+                                        if (spaceIndex > 0 && spaceIndex < fullLabel.length - 1) {
+                                          const line1 = fullLabel.substring(0, spaceIndex)
+                                          const line2 = fullLabel.substring(spaceIndex + 1)
+                                          
+                                          return (
+                                            <g>
+                                              <text
+                                                x={x + 8}
+                                                y={y + verticalOffset}
+                                                fill={color}
+                                                fontSize={12}
+                                                fontWeight={500}
+                                                textAnchor="start"
+                                              >
+                                                {line1}
+                                              </text>
+                                              <text
+                                                x={x + 8}
+                                                y={y + verticalOffset + 14}
+                                                fill={color}
+                                                fontSize={12}
+                                                fontWeight={500}
+                                                textAnchor="start"
+                                              >
+                                                {line2}
+                                              </text>
+                                            </g>
+                                          )
+                                        }
+                                      }
                                       
                                       return (
                                         <text
@@ -512,7 +598,7 @@ function App() {
                                           fontWeight={500}
                                           textAnchor="start"
                                         >
-                                          {labelText}
+                                          {fullLabel}
                                         </text>
                                       )
                                     }
@@ -528,18 +614,31 @@ function App() {
                   </div>
                   {(activeIndicator.fraga || activeIndicator.kommentar) && (
                     <div className="chart-card__metadata">
-                      {activeIndicator.fraga && (
-                        <div className="metadata-box">
-                          <h4 className="metadata-box__label">Fråga</h4>
-                          <p className="metadata-box__content">{activeIndicator.fraga}</p>
+                      <div className="metadata-layout">
+                        {activeIndicator.kommentar && (
+                          <div className="metadata-box metadata-box--left">
+                            <h4 className="metadata-box__label">Kommentar</h4>
+                            <p className="metadata-box__content">{activeIndicator.kommentar}</p>
+                          </div>
+                        )}
+                        <div className="metadata-box metadata-box--right">
+                          {activeIndicator.fraga && (
+                            <div className="metadata-item">
+                              <h4 className="metadata-box__label">Fråga</h4>
+                              <p className="metadata-box__content">{activeIndicator.fraga}</p>
+                            </div>
+                          )}
+                          {(() => {
+                            const kallaText = getYearRange(activeIndicator)
+                            return kallaText ? (
+                              <div className="metadata-item">
+                                <h4 className="metadata-box__label">Källa</h4>
+                                <p className="metadata-box__content">{kallaText}</p>
+                              </div>
+                            ) : null
+                          })()}
                         </div>
-                      )}
-                      {activeIndicator.kommentar && (
-                        <div className="metadata-box">
-                          <h4 className="metadata-box__label">Kommentar</h4>
-                          <p className="metadata-box__content">{activeIndicator.kommentar}</p>
-                        </div>
-                      )}
+                      </div>
                     </div>
                   )}
                 </section>
@@ -551,7 +650,7 @@ function App() {
       <footer className="app-footer">
         <div className="footer-content">
           <div className="footer-column footer-logos">
-            <img src="/footer.jpg" alt="SOM-institutet och Göteborgs Universitet" className="footer-logo-image" />
+            <img src={`${import.meta.env.BASE_URL}footer.jpg`} alt="SOM-institutet och Göteborgs Universitet" className="footer-logo-image" />
           </div>
           <div className="footer-column">
             <h3 className="footer-heading">Kontakt</h3>

@@ -3,7 +3,7 @@
   grid-template-columns: 320px 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  background: #f4f6fb;
+  background: #ffffff;
   color: #0f172a;
   position: relative;
 }
@@ -93,23 +93,17 @@
 }
 
 .sidebar__header h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin: 0.2rem 0 0.5rem;
   color: #f8fafc;
-}
-
-.sidebar__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.75rem;
-  color: rgba(248, 250, 252, 0.7);
-  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .sidebar__meta {
   margin: 0.25rem 0 0;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: rgba(226, 232, 240, 0.8);
   line-height: 1.4;
 }
@@ -125,7 +119,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   color: #f8fafc;
-  font-size: 0.9rem;
+  font-size: 0.8125rem;
   transition: all 0.2s ease;
 }
 
@@ -181,7 +175,7 @@
   background: none;
   border: none;
   color: inherit;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 600;
@@ -212,7 +206,7 @@
   color: rgba(226, 232, 240, 0.9);
   padding: 0.45rem 0.75rem;
   border-radius: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -249,13 +243,13 @@
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: #0f172a;
   margin: 0;
 }
 
 .content__meta {
   margin: 0;
-  color: #64748b;
+  color: #0f172a;
 }
 
 .chart-card {
@@ -265,7 +259,7 @@
   box-shadow:
     0 25px 45px rgba(15, 23, 42, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  border: 1px solid #e2e8f0;
+  border: 1px solid #ffffff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   animation: fadeInUp 0.4s ease;
 }
@@ -301,24 +295,79 @@
 
 .chart-card__meta {
   margin: 0.25rem 0 0;
-  color: #94a3b8;
+  color: #0f172a;
   font-size: 0.9rem;
 }
 
 .chart-card__metadata {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #ffffff;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
+.metadata-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: start;
+}
+
 .metadata-box {
-  background: #f8fafc;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #ffffff;
+}
+
+.metadata-box--left {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e2e8f0 !important;
+  flex-shrink: 0;
+  width: fit-content;
+  max-width: 50%;
+  align-self: start;
+}
+
+.metadata-box--right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 0; /* Allow flexbox to shrink */
+  flex: 1;
+  align-self: start;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.metadata-layout:has(.metadata-box--left:only-child),
+.metadata-layout:has(.metadata-box--right:only-child) {
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .metadata-layout {
+    flex-direction: column;
+  }
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
   border-radius: 0.75rem;
   padding: 1.25rem 1.5rem;
   border: 1px solid #e2e8f0;
+}
+
+.metadata-box--right > .metadata-item:first-child {
+  margin-top: 0;
 }
 
 .metadata-box__label {
@@ -327,7 +376,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #64748b;
+  color: #0f172a;
 }
 
 .metadata-box__content {
@@ -373,11 +422,11 @@
 .data-table td {
   padding: 0.5rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #ffffff;
 }
 
 .data-table th {
-  background: #f8fafc;
+  background: #ffffff;
   font-weight: 600;
   color: #0f172a;
   text-transform: uppercase;
@@ -395,11 +444,11 @@
 .data-table td {
   white-space: nowrap;
   font-size: 0.85rem;
-  color: #475569;
+  color: #0f172a;
 }
 
 .data-table tr:hover td {
-  background: #f8fafc;
+  background: #ffffff;
 }
 
 .data-table tr:last-child td {
@@ -408,10 +457,10 @@
 
 .state-card {
   background: #ffffff;
-  border: 1px dashed #cbd5f5;
+  border: 1px dashed #e2e8f0;
   border-radius: 1rem;
   padding: 1.5rem;
-  color: #475569;
+  color: #0f172a;
 }
 
 .state-card.error {
