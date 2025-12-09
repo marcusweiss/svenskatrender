@@ -130,7 +130,8 @@ function App() {
   useEffect(() => {
     // Use import.meta.env.BASE_URL to handle the base path correctly
     const baseUrl = import.meta.env.BASE_URL || '/'
-    const dataUrl = `${baseUrl}data/report-data.json`.replace(/\/+/g, '/') // Remove duplicate slashes
+    // Add cache-busting query parameter to force reload of updated data
+    const dataUrl = `${baseUrl}data/report-data.json?v=${Date.now()}`.replace(/\/+/g, '/') // Remove duplicate slashes
     
     fetch(dataUrl)
       .then(async (res) => {
