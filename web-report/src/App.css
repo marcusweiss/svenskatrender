@@ -579,18 +579,29 @@
 .footer-social {
   display: flex;
   gap: 1rem;
+  align-items: center;
   margin-top: 0.25rem;
 }
 
-.footer-social a {
+.footer-social a.social-icon {
   color: rgba(248, 250, 252, 0.8);
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.footer-social a:hover {
+.footer-social a.social-icon:hover {
   color: #f8fafc;
+  transform: scale(1.1);
+}
+
+.footer-social a.social-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1024px) {

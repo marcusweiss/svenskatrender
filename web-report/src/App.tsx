@@ -233,7 +233,7 @@ function App() {
       </button>
       <aside className={`sidebar ${isMobileMenuOpen ? 'is-open' : ''}`}>
         <div className="sidebar__header">
-          <h1>Svenska Trender 1986–2024</h1>
+          <h1>Svenska Trender 1986–2025</h1>
           {report && (
             <p className="sidebar__meta">
               Uppdaterad {new Date(report.generated_at).toLocaleDateString('sv-SE')}
@@ -410,7 +410,7 @@ function App() {
                         <div className="metadata-box metadata-box--right">
                           {activeIndicator.fraga && (
                             <div className="metadata-item">
-                              <h4 className="metadata-box__label">Fråga</h4>
+                              <h4 className="metadata-box__label">Frågeformulering</h4>
                               <p className="metadata-box__content">{activeIndicator.fraga}</p>
                             </div>
                           )}
@@ -481,12 +481,12 @@ function App() {
                         <CartesianGrid stroke="#E5E7EB" vertical={false} />
                         <XAxis
                           dataKey="category"
-                          tick={{ fontSize: 12, fill: '#6B7280' }}
+                          tick={{ fontSize: 14, fill: '#6B7280' }}
                           tickLine={false}
                           axisLine={{ stroke: '#D1D5DB' }}
                         />
                         <YAxis
-                          tick={{ fontSize: 12, fill: '#6B7280' }}
+                          tick={{ fontSize: 14, fill: '#6B7280' }}
                           tickLine={false}
                           axisLine={{ stroke: '#D1D5DB' }}
                           domain={yAxisDomain}
@@ -567,7 +567,7 @@ function App() {
                                                 x={x + 8}
                                                 y={y + verticalOffset}
                                                 fill={color}
-                                                fontSize={12}
+                                                fontSize={14}
                                                 fontWeight={500}
                                                 textAnchor="start"
                                               >
@@ -577,7 +577,7 @@ function App() {
                                                 x={x + 8}
                                                 y={y + verticalOffset + 14}
                                                 fill={color}
-                                                fontSize={12}
+                                                fontSize={14}
                                                 fontWeight={500}
                                                 textAnchor="start"
                                               >
@@ -593,7 +593,7 @@ function App() {
                                           x={x + 8}
                                           y={y + verticalOffset}
                                           fill={color}
-                                          fontSize={12}
+                                          fontSize={14}
                                           fontWeight={500}
                                           textAnchor="start"
                                         >
@@ -623,7 +623,7 @@ function App() {
                         <div className="metadata-box metadata-box--right">
                           {activeIndicator.fraga && (
                             <div className="metadata-item">
-                              <h4 className="metadata-box__label">Fråga</h4>
+                              <h4 className="metadata-box__label">Frågeformulering</h4>
                               <p className="metadata-box__content">{activeIndicator.fraga}</p>
                             </div>
                           )}
@@ -649,7 +649,7 @@ function App() {
       <footer className="app-footer">
         <div className="footer-content">
           <div className="footer-column footer-logos">
-            <img src={`${import.meta.env.BASE_URL}footer.jpg`} alt="SOM-institutet och Göteborgs Universitet" className="footer-logo-image" />
+            <img src={`${import.meta.env.BASE_URL}footer.png`} alt="SOM-institutet och Göteborgs Universitet" className="footer-logo-image" />
           </div>
           <div className="footer-column">
             <h3 className="footer-heading">Kontakt</h3>
@@ -657,18 +657,30 @@ function App() {
             <p className="footer-link">031 786 3300</p>
             <p>E-post</p>
             <p className="footer-link">info@som.gu.se</p>
-            <p>Sociala medier</p>
+            <h3 className="footer-heading" style={{ marginTop: '1.5rem' }}>SOCIALA MEDIER</h3>
             <div className="footer-social">
-              <a href="https://twitter.com/sominstitutet" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
-              <a href="https://www.facebook.com/sominstitutet" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
-              <a href="https://www.linkedin.com/company/som-institutet" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+              <a href="https://twitter.com/sominstitutet" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="social-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/sominstitutet" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/som-institutet" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
             </div>
           </div>
           <div className="footer-column">
             <h3 className="footer-heading">Besöksadress</h3>
             <p>Seminariegatan 1B</p>
             <p>413 13 Göteborg</p>
-            <h3 className="footer-heading">Postadress</h3>
+            <h3 className="footer-heading" style={{ marginTop: '1.5rem' }}>Postadress</h3>
             <p>SOM-institutet</p>
             <p>Göteborgs universitet</p>
             <p>Box 710</p>
