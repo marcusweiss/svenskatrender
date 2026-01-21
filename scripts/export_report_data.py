@@ -408,7 +408,8 @@ def build_sections(workbook, charts: Dict[str, List[Dict]]) -> List[Dict]:
         
         if "medborgarnas viktigaste samhällsproblem" in raw_rubrik:
             needs_reverse = True
-        elif "vad svenskar oroar sig" in raw_rubrik and ("arbetslöshet och ekonomisk kris" in raw_underrubrik_check or "samtliga områden" in raw_underrubrik_check):
+        elif "vad svenskar oroar sig" in raw_rubrik and "samtliga områden" in raw_underrubrik_check:
+            # Only reverse for "Samtliga områden", NOT for "Ekonomisk kris och Stor arbetslöshet"
             needs_reverse = True
         elif "partisympati" in raw_rubrik or "partisymp" in raw_sheet_name:
             needs_reverse = True
