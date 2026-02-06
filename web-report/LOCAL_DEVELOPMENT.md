@@ -21,12 +21,15 @@ cd C:\Users\xwmarc\Desktop\AI-test\web-report
 ```
 
 ### Step 3: Open in Browser
-The terminal will show a URL like:
+The terminal will show URLs like:
 ```
 ➜  Local:   http://localhost:5173/svenskatrender/
+➜  Network: http://10.x.x.x:5173/svenskatrender/
 ```
 
-**Click that URL** or copy it into your browser.
+**On this computer:** click the **Local** URL or copy it into your browser.
+
+**On your phone (same Wi‑Fi):** open the **Network** URL in your phone’s browser. You can test the mobile layout without pushing to GitHub.
 
 ---
 

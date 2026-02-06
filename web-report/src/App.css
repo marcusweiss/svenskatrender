@@ -535,6 +535,13 @@
   }
 }
 
+/* Give chart more horizontal space on phones */
+@media (max-width: 480px) {
+  .chart-card {
+    padding: 1rem 0.75rem;
+  }
+}
+
 /* Footer */
 .app-footer {
   grid-column: 1 / -1;

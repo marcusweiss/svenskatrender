@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, type ReactNode } from 'react'
 import {
   CartesianGrid,
   Line,
@@ -85,6 +85,25 @@ const getSegments = (values: (number | string | null)[]): { runs: Run[]; gaps: G
     gaps.push({ from: runs[r].end, to: runs[r + 1].start })
   }
   return { runs, gaps }
+}
+
+/** Wraps the chart and measures width so we can use responsive margins (smaller right margin on narrow screens). */
+function ChartWrap({ children }: { children: (width: number) => ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(400)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const ro = new ResizeObserver(() => setWidth(el.offsetWidth))
+    ro.observe(el)
+    setWidth(el.offsetWidth)
+    return () => ro.disconnect()
+  }, [])
+  return (
+    <div ref={ref} className="chart-card__chart-wrap">
+      {children(width)}
+    </div>
+  )
 }
 
 const formatChartData = (chart?: ChartDefinition) => {
@@ -530,9 +549,13 @@ function App() {
               return (
                 <section key={chart.id} className="chart-card">
                   <div className="chart-card__body">
-                    <div className="chart-card__chart-wrap">
+                    <ChartWrap>
+                      {(chartWidth) => {
+                        const marginRight = chartWidth < 360 ? 60 : chartWidth < 420 ? 75 : chartWidth < 520 ? 95 : chartWidth < 640 ? 120 : 180
+                        const marginLeft = chartWidth < 400 ? 6 : 12
+                        return (
                       <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={chartData} margin={{ top: 16, right: 180, left: 12, bottom: 16 }}>
+                        <LineChart data={chartData} margin={{ top: 16, right: marginRight, left: marginLeft, bottom: 16 }}>
                         <CartesianGrid stroke="#E5E7EB" vertical={false} />
                         <XAxis
                           dataKey="category"
@@ -674,7 +697,9 @@ function App() {
                         })}
                         </LineChart>
                       </ResponsiveContainer>
-                    </div>
+                        )
+                      }}
+                    </ChartWrap>
                   </div>
                   {(activeIndicator.fraga || activeIndicator.kommentar) && (
                     <div className="chart-card__metadata">
