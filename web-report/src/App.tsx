@@ -9,7 +9,6 @@ import {
   YAxis,
   LabelList,
 } from 'recharts'
-import type { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent'
 import './App.css'
 
 type ChartSeries = {
@@ -54,6 +53,39 @@ type ReportData = {
 }
 
 const palette = ['#111827', '#A44E07', '#2563EB', '#059669', '#9333EA', '#DC2626']
+
+type Run = { start: number; end: number }
+type Gap = { from: number; to: number }
+
+/** Splits series values into contiguous runs (consecutive non-null) and gaps (from end of run to start of next). */
+const getSegments = (values: (number | string | null)[]): { runs: Run[]; gaps: Gap[] } => {
+  const runs: Run[] = []
+  const gaps: Gap[] = []
+  let start: number | null = null
+  let last: number | null = null
+  const n = values.length
+  for (let i = 0; i < n; i++) {
+    const v = values[i]
+    const num = v !== null && v !== undefined ? Number(v) : NaN
+    const valid = !Number.isNaN(num)
+    if (valid) {
+      if (start === null) start = i
+      last = i
+    } else {
+      if (start !== null && last !== null) {
+        runs.push({ start, end: last })
+        start = null
+        last = null
+      }
+    }
+  }
+  if (start !== null && last !== null) runs.push({ start, end: last })
+
+  for (let r = 0; r < runs.length - 1; r++) {
+    gaps.push({ from: runs[r].end, to: runs[r + 1].start })
+  }
+  return { runs, gaps }
+}
 
 const formatChartData = (chart?: ChartDefinition) => {
   if (!chart) return []
@@ -464,6 +496,27 @@ function App() {
                   return roundedRow
                 })
               }
+              // Build extended chart data with segment keys for solid/dashed lines (runs = solid, gaps = dashed)
+              type Row = Record<string, string | number | null>
+              const extendedRows: Row[] = chartRows.map((row) => ({ ...row }))
+              chart.series.forEach((serie) => {
+                const values = chartRows.map((row) => row[serie.name]) as (number | string | null)[]
+                const { runs, gaps } = getSegments(values)
+                runs.forEach((run, ri) => {
+                  const key = `__run_${serie.name}_${ri}`
+                  extendedRows.forEach((row, rowIndex) => {
+                    ;(row as Row)[key] = rowIndex >= run.start && rowIndex <= run.end ? chartRows[rowIndex][serie.name] : null
+                  })
+                })
+                gaps.forEach((gap, gi) => {
+                  const key = `__gap_${serie.name}_${gi}`
+                  extendedRows.forEach((row, rowIndex) => {
+                    ;(row as Row)[key] = rowIndex === gap.from ? chartRows[gap.from][serie.name] : rowIndex === gap.to ? chartRows[gap.to][serie.name] : null
+                  })
+                })
+              })
+              const chartData = extendedRows
+
               // Check if any values are negative
               const hasNegativeValues = chartRows.some((row) =>
                 chart.series.some((serie) => {
@@ -477,8 +530,9 @@ function App() {
               return (
                 <section key={chart.id} className="chart-card">
                   <div className="chart-card__body">
-                    <ResponsiveContainer width="100%" height={480}>
-                      <LineChart data={chartRows} margin={{ top: 16, right: 180, left: 12, bottom: 16 }}>
+                    <div className="chart-card__chart-wrap">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={chartData} margin={{ top: 16, right: 180, left: 12, bottom: 16 }}>
                         <CartesianGrid stroke="#E5E7EB" vertical={false} />
                         <XAxis
                           dataKey="category"
@@ -494,24 +548,36 @@ function App() {
                         />
                         <Tooltip
                           contentStyle={{ borderRadius: 12, borderColor: '#E5E7EB' }}
-                          formatter={(value: ValueType, name: NameType) => {
-                            const numericValue =
-                              typeof value === 'number'
-                                ? value
-                                : typeof value === 'string'
-                                  ? Number(value)
-                                  : null
-                            const label = typeof name === 'string' ? name : String(name ?? '')
-                            const display =
-                              typeof numericValue === 'number' && Number.isFinite(numericValue)
-                                ? `${Math.round(numericValue)}%`
-                                : '–'
-                            return [display, label]
+                          content={({ active, payload, label, ...rest }) => {
+                            const filtered = (payload ?? []).filter((p) => !String(p.dataKey ?? '').startsWith('__'))
+                            if (!active || !filtered.length) return null
+                            return (
+                              <div className="recharts-default-tooltip" style={rest.contentStyle}>
+                                <p className="recharts-tooltip-label">{typeof rest.labelFormatter === 'function' ? (rest.labelFormatter as (label: unknown) => string)(label) : `År ${label}`}</p>
+                                <ul className="recharts-tooltip-item-list">
+                                  {filtered.map((p, i) => {
+                                    const value = p.value
+                                    const name = p.name ?? p.dataKey
+                                    const numericValue = typeof value === 'number' ? value : typeof value === 'string' ? Number(value) : null
+                                    const display = typeof numericValue === 'number' && Number.isFinite(numericValue) ? `${Math.round(numericValue)}%` : '–'
+                                    return (
+                                      <li key={i} className="recharts-tooltip-item" style={{ color: p.color }}>
+                                        <span className="recharts-tooltip-item-name">{name}</span>
+                                        <span className="recharts-tooltip-item-separator">: </span>
+                                        <span className="recharts-tooltip-item-value">{display}</span>
+                                      </li>
+                                    )
+                                  })}
+                                </ul>
+                              </div>
+                            )
                           }}
                           labelFormatter={(label) => `År ${label}`}
                         />
                         {chart.series.map((serie, index) => {
                           const color = palette[index % palette.length]
+                          const values = chartRows.map((row) => row[serie.name]) as (number | string | null)[]
+                          const { runs, gaps } = getSegments(values)
                           // Find the last valid data point index for this series
                           let lastValidIndex = -1
                           for (let i = chartRows.length - 1; i >= 0; i--) {
@@ -521,96 +587,94 @@ function App() {
                               break
                             }
                           }
-                          
-                          // Check if this is partiledarpopularitet (no % sign)
+                          const lastRunIndex = runs.findIndex((r) => r.start <= lastValidIndex && lastValidIndex <= r.end)
                           const isPartiledare = activeIndicator.title.toLowerCase().includes('partiledarpopularitet')
-                          
+
+                          const labelContent = ({ x, y, value, index: pointIndex }: any) => {
+                            if (pointIndex !== lastValidIndex || lastValidIndex < 0) return null
+                            if (value === null || value === undefined || isNaN(Number(value))) return null
+                            const verticalOffset = (index - (chart.series.length - 1) / 2) * 3
+                            const displayValue = Math.round(Number(value))
+                            const percentageText = isPartiledare ? `${displayValue}` : `${displayValue}%`
+                            const fullLabel = `${percentageText} ${serie.name}`
+                            const maxLength = 28
+                            if (fullLabel.length > maxLength) {
+                              const spaceIndex = fullLabel.lastIndexOf(' ', maxLength)
+                              if (spaceIndex > 0 && spaceIndex < fullLabel.length - 1) {
+                                const line1 = fullLabel.substring(0, spaceIndex)
+                                const line2 = fullLabel.substring(spaceIndex + 1)
+                                return (
+                                  <g>
+                                    <text x={x + 8} y={y + verticalOffset} fill={color} fontSize={14} fontWeight={500} textAnchor="start">{line1}</text>
+                                    <text x={x + 8} y={y + verticalOffset + 14} fill={color} fontSize={14} fontWeight={500} textAnchor="start">{line2}</text>
+                                  </g>
+                                )
+                              }
+                            }
+                            return (
+                              <text x={x + 8} y={y + verticalOffset} fill={color} fontSize={14} fontWeight={500} textAnchor="start">{fullLabel}</text>
+                            )
+                          }
+
                           return (
-                            <Line
-                              key={serie.name}
-                              type="linear"
-                              dataKey={serie.name}
-                              stroke={color}
-                              strokeWidth={2.5}
-                              dot={{ r: 4, fill: color, strokeWidth: 2, stroke: '#fff' }}
-                              activeDot={{ r: 6, fill: color, strokeWidth: 2, stroke: '#fff' }}
-                              isAnimationActive={true}
-                              animationDuration={600}
-                              connectNulls={true}
-                            >
-                              <LabelList
+                            <>
+                              {/* Invisible line so tooltip shows series name and value */}
+                              <Line
+                                key={`${serie.name}-tooltip`}
+                                type="linear"
                                 dataKey={serie.name}
-                                content={({ x, y, value, index: pointIndex }: any) => {
-                                  // Only show label for the last valid data point
-                                  if (pointIndex === lastValidIndex && lastValidIndex >= 0) {
-                                    if (value !== null && value !== undefined && !isNaN(Number(value))) {
-                                      // Simple small offset based on index to prevent exact overlap
-                                      // This keeps labels close to their data points
-                                      const verticalOffset = (index - (chart.series.length - 1) / 2) * 3
-                                      
-                                      // Format value - no % for partiledarpopularitet
-                                      const displayValue = Math.round(Number(value))
-                                      const percentageText = isPartiledare ? `${displayValue}` : `${displayValue}%`
-                                      // Add series name (label) to the value
-                                      const fullLabel = `${percentageText} ${serie.name}`
-                                      
-                                      // Split long labels into two lines if needed (max 28 chars per line)
-                                      const maxLength = 28
-                                      if (fullLabel.length > maxLength) {
-                                        const spaceIndex = fullLabel.lastIndexOf(' ', maxLength)
-                                        if (spaceIndex > 0 && spaceIndex < fullLabel.length - 1) {
-                                          const line1 = fullLabel.substring(0, spaceIndex)
-                                          const line2 = fullLabel.substring(spaceIndex + 1)
-                                          
-                                          return (
-                                            <g>
-                                              <text
-                                                x={x + 8}
-                                                y={y + verticalOffset}
-                                                fill={color}
-                                                fontSize={14}
-                                                fontWeight={500}
-                                                textAnchor="start"
-                                              >
-                                                {line1}
-                                              </text>
-                                              <text
-                                                x={x + 8}
-                                                y={y + verticalOffset + 14}
-                                                fill={color}
-                                                fontSize={14}
-                                                fontWeight={500}
-                                                textAnchor="start"
-                                              >
-                                                {line2}
-                                              </text>
-                                            </g>
-                                          )
-                                        }
-                                      }
-                                      
-                                      return (
-                                        <text
-                                          x={x + 8}
-                                          y={y + verticalOffset}
-                                          fill={color}
-                                          fontSize={14}
-                                          fontWeight={500}
-                                          textAnchor="start"
-                                        >
-                                          {fullLabel}
-                                        </text>
-                                      )
-                                    }
-                                  }
-                                  return null
-                                }}
+                                stroke="transparent"
+                                strokeWidth={0}
+                                dot={false}
+                                activeDot={false}
+                                connectNulls={true}
+                                name={serie.name}
+                                isAnimationActive={false}
                               />
-                            </Line>
+                              {runs.map((_run, ri) => {
+                                const runKey = `__run_${serie.name}_${ri}`
+                                const isLastRun = lastRunIndex >= 0 && ri === lastRunIndex
+                                return (
+                                  <Line
+                                    key={`${serie.name}-run-${ri}`}
+                                    type="linear"
+                                    dataKey={runKey}
+                                    stroke={color}
+                                    strokeWidth={2.5}
+                                    dot={{ r: 4, fill: color, strokeWidth: 2, stroke: '#fff' }}
+                                    activeDot={{ r: 6, fill: color, strokeWidth: 2, stroke: '#fff' }}
+                                    connectNulls={true}
+                                    isAnimationActive={true}
+                                    animationDuration={600}
+                                  >
+                                    {isLastRun ? <LabelList dataKey={runKey} content={labelContent} /> : null}
+                                  </Line>
+                                )
+                              })}
+                              {gaps.map((_gap, gi) => {
+                                const gapKey = `__gap_${serie.name}_${gi}`
+                                return (
+                                  <Line
+                                    key={`${serie.name}-gap-${gi}`}
+                                    type="linear"
+                                    dataKey={gapKey}
+                                    stroke={color}
+                                    strokeWidth={2.5}
+                                    strokeDasharray="6 4"
+                                    dot={false}
+                                    activeDot={false}
+                                    connectNulls={true}
+                                    isAnimationActive={true}
+                                    animationDuration={600}
+                                  />
+                                )
+                              })}
+                            </>
                           )
                         })}
-                      </LineChart>
-                    </ResponsiveContainer>
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
                   </div>
                   {(activeIndicator.fraga || activeIndicator.kommentar) && (
                     <div className="chart-card__metadata">

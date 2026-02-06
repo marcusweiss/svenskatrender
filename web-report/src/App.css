@@ -310,6 +310,15 @@
   font-size: 0.9rem;
 }
 
+/* Responsive chart: scale height with width, avoid squishing on small screens */
+.chart-card__chart-wrap {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  max-height: 480px;
+  min-height: 240px;
+}
+
 .chart-card__metadata {
   margin-top: 2rem;
   padding-top: 2rem;
