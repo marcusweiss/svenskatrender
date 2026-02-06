@@ -422,6 +422,31 @@ const formatChartData = (chart?: ChartDefinition) => {
   })
 }
 
+function getIndicatorDisplayTitle(indicator: Indicator): string {
+  const titleLower = indicator.title.toLowerCase()
+  if (titleLower.includes('partiledarpopularitet') && indicator.rubrik) {
+    const match = indicator.rubrik.match(/\(([^)]+)\)/)
+    if (match) return `Partiledarpopularitet: ${match[1]}`
+  }
+  if (titleLower.includes('vad svenskar oroar sig') && indicator.underrubrik) {
+    return `Oro: ${indicator.underrubrik}`
+  }
+  if (titleLower.includes('fritidsaktiviteter') && indicator.underrubrik) {
+    return `${indicator.title}: ${indicator.underrubrik}`
+  }
+  if (titleLower.includes('förtroende') && indicator.underrubrik) {
+    return `${indicator.title}: ${indicator.underrubrik}`
+  }
+  if (titleLower.includes('partisympati')) {
+    return `${indicator.title} (procent)`
+  }
+  let displayTitle = indicator.title
+  if (displayTitle.includes('POL SAKFRÅGOR')) {
+    displayTitle = displayTitle.replace(/POL SAKFRÅGOR/g, 'POLITISKA SAKFRÅGOR')
+  }
+  return displayTitle
+}
+
 const getYearRange = (indicator: Indicator): string | null => {
   // Try to get years from chart categories
   if (indicator.charts && indicator.charts.length > 0) {
@@ -485,6 +510,7 @@ function App() {
   const handleExportChart = (chartId: string, title?: string) => {
     const el = chartExportRefs.current[chartId]
     if (!el) return
+    el.classList.add('is-exporting')
     toPng(el, { pixelRatio: 2, backgroundColor: '#ffffff' })
       .then((dataUrl) => {
         const a = document.createElement('a')
@@ -493,6 +519,9 @@ function App() {
         a.click()
       })
       .catch((err) => console.error('Export failed:', err))
+      .finally(() => {
+        el.classList.remove('is-exporting')
+      })
   }
 
   useEffect(() => {
@@ -835,41 +864,7 @@ function App() {
           <>
             <header className="content__header">
               <p className="content__eyebrow">{activeSection?.title === "POL SAKFRÅGOR" ? "POLITISKA SAKFRÅGOR" : activeSection?.title}</p>
-              <h2>
-                {(() => {
-                  const titleLower = activeIndicator.title.toLowerCase()
-                  // Partiledarpopularitet: extract party name from rubrik
-                  if (titleLower.includes('partiledarpopularitet') && activeIndicator.rubrik) {
-                    const match = activeIndicator.rubrik.match(/\(([^)]+)\)/)
-                    if (match) {
-                      const partyName = match[1]
-                      return `Partiledarpopularitet: ${partyName}`
-                    }
-                  }
-                  // Vad svenskar oroar sig för: change to "Oro" with underrubrik
-                  if (titleLower.includes('vad svenskar oroar sig') && activeIndicator.underrubrik) {
-                    return `Oro: ${activeIndicator.underrubrik}`
-                  }
-                  // Fritidsaktiviteter: add underrubrik
-                  if (titleLower.includes('fritidsaktiviteter') && activeIndicator.underrubrik) {
-                    return `${activeIndicator.title}: ${activeIndicator.underrubrik}`
-                  }
-                  // Förtroende: add underrubrik
-                  if (titleLower.includes('förtroende') && activeIndicator.underrubrik) {
-                    return `${activeIndicator.title}: ${activeIndicator.underrubrik}`
-                  }
-                  // Partisympati: add (procent) to title
-                  if (titleLower.includes('partisympati')) {
-                    return `${activeIndicator.title} (procent)`
-                  }
-                  let displayTitle = activeIndicator.title
-                  // Replace POL SAKFRÅGOR with POLITISKA SAKFRÅGOR in indicator titles
-                  if (displayTitle.includes("POL SAKFRÅGOR")) {
-                    displayTitle = displayTitle.replace(/POL SAKFRÅGOR/g, "POLITISKA SAKFRÅGOR")
-                  }
-                  return displayTitle
-                })()}
-              </h2>
+              <h2>{getIndicatorDisplayTitle(activeIndicator)}</h2>
             </header>
             {activeIndicator.typ && activeIndicator.typ.toLowerCase().trim() === "tabell" && activeIndicator.table && (
               <section className="chart-card">
@@ -1013,6 +1008,16 @@ function App() {
                       }}
                       className="chart-export-wrap"
                     >
+                      <div className="chart-export-logo">
+                        <img
+                          src={`${import.meta.env.BASE_URL}SOM_Huvud_CMYK_GUright.jpg`}
+                          alt="SOM-institutet och Göteborgs universitet"
+                          className="chart-export-logo__img"
+                        />
+                      </div>
+                      <div className="chart-export-header">
+                        <h2 className="chart-export-title">{getIndicatorDisplayTitle(activeIndicator)}</h2>
+                      </div>
                       <ChartWrap>
                         {(chartWidth) => {
                           const marginRight = chartWidth < 360 ? 60 : chartWidth < 420 ? 75 : chartWidth < 520 ? 95 : chartWidth < 640 ? 120 : 180
@@ -1030,12 +1035,41 @@ function App() {
                           )
                         }}
                       </ChartWrap>
+                      <div className="chart-export-metadata">
+                        <div className="chart-export-metadata__layout">
+                          {activeIndicator.kommentar && (
+                            <div className="chart-export-metadata__box chart-export-metadata__box--left">
+                              <h4 className="chart-export-metadata__label">Kommentar</h4>
+                              <p className="chart-export-metadata__content">{activeIndicator.kommentar}</p>
+                            </div>
+                          )}
+                          <div className="chart-export-metadata__box chart-export-metadata__box--right">
+                            {activeIndicator.fraga && (
+                              <div className="chart-export-metadata__item">
+                                <h4 className="chart-export-metadata__label">Frågeformulering</h4>
+                                <p className="chart-export-metadata__content">{activeIndicator.fraga}</p>
+                              </div>
+                            )}
+                            {getYearRange(activeIndicator) && (
+                              <div className="chart-export-metadata__item">
+                                <h4 className="chart-export-metadata__label">Källa</h4>
+                                <p className="chart-export-metadata__content">{getYearRange(activeIndicator)}</p>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <button
                       type="button"
                       onClick={() => handleExportChart(chart.id, activeIndicator?.title)}
                       className="chart-export-btn"
                     >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
                       Ladda ner diagram
                     </button>
                   </div>
